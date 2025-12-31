@@ -1,0 +1,1302 @@
+[
+  {
+    "projectId": "P1",
+    "name": "Production-Grade React App",
+    "type": "Frontend architecture + performance lab",
+    "purpose": "Master React internals, state management, browser behavior, performance engineering, and frontend architecture at scale.",
+    "details": "A deliberately over-engineered frontend application built to simulate real-world complexity. The app is not about business features but about correctness, performance, architecture, observability, and robustness across devices, networks, and edge cases.",
+    "outcome": "Ability to design, debug, and optimize large-scale React applications with confidence. Demonstrable proof of understanding React rendering, memory behavior, performance bottlenecks, and scalable frontend architecture.",
+    "topicsCovered": [
+      "T02",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T12",
+      "T26",
+      "T27",
+      "T32",
+      "T33",
+      "T36"
+    ],
+    "techStack": {
+      "frontend": ["React", "TypeScript"],
+      "state": ["Zustand", "URL state", "localStorage"],
+      "build": ["Vite"],
+      "styling": ["CSS Modules", "Design Tokens"],
+      "tooling": ["ESLint", "Prettier", "React DevTools", "Chrome DevTools"],
+      "optional": ["Service Workers", "Workbox"]
+    },
+    "architecturePrinciples": [
+      "Feature-based folder structure",
+      "Explicit state ownership and isolation",
+      "Render-path awareness",
+      "Performance budgets as constraints",
+      "Measure before optimizing",
+      "Design system as governance, not components"
+    ],
+    "features": [
+      {
+        "featureId": "F1",
+        "name": "Feature-based architecture",
+        "description": "Organize the application by business and capability features instead of technical layers.",
+        "topicsCovered": ["T26", "T07"],
+        "implementationNotes": [
+          "Each feature owns its components, hooks, state, styles",
+          "Shared code must justify itself explicitly"
+        ],
+        "pitfallsToAvoid": [
+          "God-level shared components",
+          "Cross-feature imports"
+        ]
+      },
+      {
+        "featureId": "F2",
+        "name": "Multiple state layers",
+        "description": "Explicit separation of UI state, server state, URL state, and persistent state.",
+        "topicsCovered": ["T05", "T06", "T33"],
+        "implementationNotes": [
+          "UI state stays local",
+          "Server state isolated from UI concerns",
+          "URL used as state only when shareable"
+        ],
+        "pitfallsToAvoid": [
+          "Global state everywhere",
+          "Coupling server and UI state"
+        ]
+      },
+      {
+        "featureId": "F3",
+        "name": "Performance budgets",
+        "description": "Define and enforce bundle size and render-time budgets.",
+        "topicsCovered": ["T12", "T33"],
+        "implementationNotes": [
+          "Measure initial load",
+          "Track render counts per interaction"
+        ],
+        "pitfallsToAvoid": ["Optimizing without metrics"]
+      },
+      {
+        "featureId": "F4",
+        "name": "Lazy routes and code splitting",
+        "description": "Use route-level and component-level lazy loading.",
+        "topicsCovered": ["T08", "T12"],
+        "implementationNotes": ["Lazy load routes", "Avoid waterfall imports"],
+        "pitfallsToAvoid": ["Too many small chunks", "Hidden waterfalls"]
+      },
+      {
+        "featureId": "F5",
+        "name": "Design system and theming",
+        "description": "Token-driven theming with dark mode and extensibility.",
+        "topicsCovered": ["T07", "T26"],
+        "implementationNotes": [
+          "Design tokens drive all colors and spacing",
+          "Themes switch without rerender storms"
+        ],
+        "pitfallsToAvoid": ["Theme logic inside components"]
+      },
+      {
+        "featureId": "F6",
+        "name": "Error boundaries and Suspense",
+        "description": "Graceful error handling and async rendering.",
+        "topicsCovered": ["T04", "T36"],
+        "implementationNotes": [
+          "Error boundaries per feature",
+          "Suspense boundaries placed intentionally"
+        ],
+        "pitfallsToAvoid": ["Single global boundary"]
+      },
+      {
+        "featureId": "F7",
+        "name": "Real performance debugging",
+        "description": "Use flame charts, heap snapshots, and React Profiler to diagnose issues.",
+        "topicsCovered": ["T27", "T33", "T36"],
+        "implementationNotes": [
+          "Capture before/after metrics",
+          "Document findings"
+        ],
+        "pitfallsToAvoid": ["Guessing performance issues"]
+      },
+      {
+        "featureId": "F8",
+        "name": "Offline and slow network handling",
+        "description": "Graceful degradation under bad network conditions.",
+        "topicsCovered": ["T32", "T12"],
+        "implementationNotes": ["Network state awareness", "Offline fallbacks"],
+        "pitfallsToAvoid": ["Assuming perfect connectivity"]
+      }
+    ],
+    "userFlows": [
+      {
+        "flowId": "UF1",
+        "name": "Initial load and navigation",
+        "steps": [
+          "App bootstraps",
+          "Initial route loads",
+          "Lazy chunks fetched",
+          "UI becomes interactive"
+        ]
+      },
+      {
+        "flowId": "UF2",
+        "name": "Theme switching",
+        "steps": [
+          "User toggles theme",
+          "Design tokens update",
+          "UI updates without layout thrash"
+        ]
+      },
+      {
+        "flowId": "UF3",
+        "name": "Offline interaction",
+        "steps": [
+          "Network drops",
+          "Cached UI loads",
+          "User sees degraded but usable experience"
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "pageId": "PAGE1",
+        "name": "Dashboard",
+        "route": "/",
+        "features": ["F1", "F2", "F3"],
+        "topicsDemonstrated": ["T26", "T05", "T12"]
+      },
+      {
+        "pageId": "PAGE2",
+        "name": "Performance Lab",
+        "route": "/performance",
+        "features": ["F3", "F7"],
+        "topicsDemonstrated": ["T27", "T33"]
+      },
+      {
+        "pageId": "PAGE3",
+        "name": "Design System",
+        "route": "/design-system",
+        "features": ["F5"],
+        "topicsDemonstrated": ["T07", "T26"]
+      }
+    ],
+    "blogs": [
+      {
+        "title": "React re-renders: how I actually debugged them",
+        "topicsCovered": ["T04", "T33", "T36"],
+        "linkedFeatures": ["F2", "F7"],
+        "gist": "Walk through render tracking, profiling, and eliminating unnecessary renders."
+      },
+      {
+        "title": "Why my React app was slow (and how I fixed it)",
+        "topicsCovered": ["T12", "T33"],
+        "linkedFeatures": ["F3", "F7"],
+        "gist": "Real metrics, real fixes, no hand-waving."
+      },
+      {
+        "title": "useEffect is not lifecycle — here’s the real model",
+        "topicsCovered": ["T04"],
+        "linkedFeatures": ["F2"],
+        "gist": "Explain effects as synchronization, not lifecycle."
+      },
+      {
+        "title": "State taxonomy: why most apps overuse global state",
+        "topicsCovered": ["T05", "T06"],
+        "linkedFeatures": ["F2"],
+        "gist": "Define state categories and correct ownership."
+      },
+      {
+        "title": "How I caught a memory leak in React",
+        "topicsCovered": ["T27", "T36"],
+        "linkedFeatures": ["F7"],
+        "gist": "Heap snapshots, retained objects, and cleanup."
+      },
+      {
+        "title": "Design systems are governance, not components",
+        "topicsCovered": ["T07", "T26"],
+        "linkedFeatures": ["F5"],
+        "gist": "Why tokens and rules matter more than buttons."
+      },
+      {
+        "title": "When NOT to optimize React",
+        "topicsCovered": ["T12", "T33"],
+        "linkedFeatures": ["F3"],
+        "gist": "Avoiding premature optimization traps."
+      },
+      {
+        "title": "Frontend architecture that scales past 50 components",
+        "topicsCovered": ["T26"],
+        "linkedFeatures": ["F1"],
+        "gist": "Structural decisions that prevent entropy."
+      }
+    ],
+    "executionGuidelines": [
+      "No performance change without measurement",
+      "Every global state must be justified",
+      "Every optimization must have before/after metrics",
+      "Every feature documents which topics it proves"
+    ],
+    "successCriteria": [
+      "Can explain render behavior of any component",
+      "Can demonstrate a fixed performance regression",
+      "Can intentionally introduce and fix a memory leak",
+      "Can defend architectural decisions"
+    ],
+    "status": {
+      "started": false,
+      "completed": false,
+      "lastUpdated": null
+    }
+  },
+  {
+    "projectId": "P2",
+    "name": "Networking & API Engineering Playground",
+    "type": "Backend + protocol deep dive",
+    "purpose": "Master HTTP fundamentals, API contract design, authentication, retries/backoff, WebSockets, failure handling, and production-safe debugging.",
+    "details": "A backend-first playground that intentionally stresses networking and failure modes. It includes a versioned REST API, multiple auth strategies (cookie + token), a typed Axios SDK with advanced client behaviors (retries, cancellation, idempotency), and a WebSocket server with reconnect/heartbeat/backpressure. The system also includes simulated failures (timeouts, partial failures, overload) to practice safe debugging and resilience patterns.",
+    "outcome": "A portfolio-ready backend demonstrating deep protocol understanding and real-world resilience techniques: versioned APIs, auth/session correctness, safe retries, client SDK design, WebSocket operational behavior, and failure-aware design with measurable safeguards.",
+    "topicsCovered": ["T09", "T10", "T22", "T24", "T25", "T30", "T33", "T36"],
+    "techStack": {
+      "backend": ["Node.js", "TypeScript", "Express"],
+      "apiDocs": ["OpenAPI (Swagger)"],
+      "auth": [
+        "Cookies (httpOnly)",
+        "JWT access token",
+        "Refresh token strategy"
+      ],
+      "data": ["PostgreSQL (or MongoDB if preferred)"],
+      "realtime": ["WebSocket (ws)"],
+      "clientSdk": ["Axios", "TypeScript SDK packaging"],
+      "resilience": [
+        "Rate limiting middleware",
+        "Circuit breaker (library or custom)"
+      ],
+      "testing": ["Jest", "Supertest", "k6 (optional load)"],
+      "tooling": [
+        "ESLint",
+        "Prettier",
+        "dotenv / env validation",
+        "Postman/Insomnia"
+      ]
+    },
+    "architecturePrinciples": [
+      "APIs are contracts: versioning + backward compatibility first",
+      "Idempotency and retries must be designed together",
+      "Timeouts everywhere and explicit backoff/jitter",
+      "Failure is normal: simulate it and design around it",
+      "Instrument-before-guessing for debugging",
+      "Separate concerns: transport, auth, validation, business logic"
+    ],
+    "features": [
+      {
+        "featureId": "F1",
+        "name": "Versioned REST API",
+        "description": "REST API with explicit versioning (e.g., /api/v1, /api/v2) and documented breaking-change rules.",
+        "topicsCovered": ["T09", "T25", "T36"],
+        "implementationNotes": [
+          "Additive changes default; breaking changes require a new version",
+          "OpenAPI spec per version",
+          "Deprecation headers and migration notes"
+        ],
+        "pitfallsToAvoid": [
+          "Silent breaking changes",
+          "Mixing v1/v2 behavior in same handlers"
+        ]
+      },
+      {
+        "featureId": "F2",
+        "name": "Auth: Cookie + Token (Session Patterns)",
+        "description": "Implement cookie-based auth (httpOnly) and token-based auth (JWT) including refresh flows.",
+        "topicsCovered": ["T09", "T10", "T30", "T36"],
+        "implementationNotes": [
+          "Cookie auth: httpOnly, sameSite, secure in prod",
+          "Token auth: short-lived access token + refresh token rotation",
+          "Protect against session fixation and replay at a high level"
+        ],
+        "pitfallsToAvoid": [
+          "Storing tokens in insecure storage",
+          "Refresh token reuse without rotation strategy"
+        ]
+      },
+      {
+        "featureId": "F3",
+        "name": "Typed Axios SDK (Client Library)",
+        "description": "Build an Axios-based SDK that supports retries, cancellation, backoff, and idempotency keys.",
+        "topicsCovered": ["T09", "T22", "T24", "T25", "T33", "T36"],
+        "implementationNotes": [
+          "Retries: exponential backoff + jitter + max attempts",
+          "Retry only safe operations by default; require idempotency keys for unsafe retries",
+          "Cancellation: AbortController integration",
+          "SDK packaged as a separate module with typed methods per endpoint"
+        ],
+        "pitfallsToAvoid": [
+          "Retrying non-idempotent writes without keys",
+          "Retry storms (no jitter, no caps)",
+          "Swallowing errors and hiding root cause"
+        ]
+      },
+      {
+        "featureId": "F4",
+        "name": "WebSocket Server (Reconnect + Heartbeat + Backpressure)",
+        "description": "WebSocket server with operational behaviors: reconnect strategy, heartbeat, and backpressure-aware messaging.",
+        "topicsCovered": ["T09", "T22", "T24", "T33", "T36"],
+        "implementationNotes": [
+          "Heartbeat ping/pong and disconnect stale clients",
+          "Client reconnect with exponential backoff + jitter",
+          "Backpressure: track send buffer and slow consumers; drop/queue policies"
+        ],
+        "pitfallsToAvoid": [
+          "No heartbeat (zombie connections)",
+          "Unbounded message queues",
+          "Broadcast storms during reconnect"
+        ]
+      },
+      {
+        "featureId": "F5",
+        "name": "Rate Limiting + Circuit Breakers",
+        "description": "Protect endpoints with rate limiting; apply circuit breakers to downstream calls or expensive paths.",
+        "topicsCovered": ["T09", "T22", "T24", "T30", "T33"],
+        "implementationNotes": [
+          "Rate limits per IP and per identity (token/user)",
+          "Circuit breaker states: closed/open/half-open with sensible thresholds",
+          "Return meaningful status codes and retry-after hints"
+        ],
+        "pitfallsToAvoid": [
+          "Naive rate limiting that’s easy to evade",
+          "Circuit breaker without observability signals",
+          "No differentiation between burst vs sustained abuse"
+        ]
+      },
+      {
+        "featureId": "F6",
+        "name": "Simulated Failures & Chaos Switchboard",
+        "description": "A controlled way to inject failures: latency, timeouts, 500s, partial failures, dropped WS messages, and overload conditions.",
+        "topicsCovered": ["T22", "T24", "T33", "T36"],
+        "implementationNotes": [
+          "Toggle failures by endpoint and percentage",
+          "Simulate timeout vs slow response separately",
+          "Provide a ‘safe mode’ kill switch to disable chaos instantly"
+        ],
+        "pitfallsToAvoid": [
+          "Uncontrolled chaos in normal flows",
+          "No ability to reproduce a specific failure"
+        ]
+      }
+    ],
+    "userFlows": [
+      {
+        "flowId": "UF1",
+        "name": "Auth (Cookie-based) Login and Refresh",
+        "steps": [
+          "User logs in",
+          "Server sets httpOnly session cookie",
+          "Protected endpoint accessed using cookie",
+          "Session expiry triggers refresh/renew strategy"
+        ]
+      },
+      {
+        "flowId": "UF2",
+        "name": "Auth (Token-based) Login and Rotation",
+        "steps": [
+          "User logs in",
+          "Client receives access token + refresh token",
+          "Access token used for API calls",
+          "Refresh rotates token and invalidates old refresh token"
+        ]
+      },
+      {
+        "flowId": "UF3",
+        "name": "SDK Request with Retries and Cancellation",
+        "steps": [
+          "SDK call made to endpoint",
+          "Network fails or returns retryable error",
+          "SDK retries with backoff and jitter",
+          "User cancels request via AbortController",
+          "SDK returns cancellation error deterministically"
+        ]
+      },
+      {
+        "flowId": "UF4",
+        "name": "WebSocket Live Session with Reconnect + Heartbeat",
+        "steps": [
+          "Client connects to WebSocket",
+          "Heartbeat maintained",
+          "Network drops",
+          "Client reconnects with backoff",
+          "Server resumes session or re-subscribes channels"
+        ]
+      },
+      {
+        "flowId": "UF5",
+        "name": "Failure Injection and Safe Debugging",
+        "steps": [
+          "Developer enables a failure mode (latency/timeout/500)",
+          "Client experiences failure",
+          "Developer captures evidence (logs/headers/timing)",
+          "Developer bisects cause and disables chaos"
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "pageId": "PAGE1",
+        "name": "API Docs (Swagger UI)",
+        "route": "/docs",
+        "features": ["F1"],
+        "topicsDemonstrated": ["T25", "T09"]
+      },
+      {
+        "pageId": "PAGE2",
+        "name": "Auth Playground UI (Optional)",
+        "route": "/playground/auth",
+        "features": ["F2"],
+        "topicsDemonstrated": ["T10", "T30", "T36"]
+      },
+      {
+        "pageId": "PAGE3",
+        "name": "SDK Playground UI (Optional)",
+        "route": "/playground/sdk",
+        "features": ["F3"],
+        "topicsDemonstrated": ["T09", "T22", "T24", "T33"]
+      },
+      {
+        "pageId": "PAGE4",
+        "name": "WebSocket Playground UI (Optional)",
+        "route": "/playground/ws",
+        "features": ["F4"],
+        "topicsDemonstrated": ["T22", "T24", "T33"]
+      },
+      {
+        "pageId": "PAGE5",
+        "name": "Chaos Switchboard (Optional)",
+        "route": "/admin/chaos",
+        "features": ["F6", "F5"],
+        "topicsDemonstrated": ["T24", "T33", "T36"]
+      }
+    ],
+    "blogs": [
+      {
+        "title": "HTTP retries can DDoS your own backend",
+        "topicsCovered": ["T09", "T22", "T24", "T33"],
+        "linkedFeatures": ["F3", "F6", "F5"],
+        "gist": "Show how naive retries create retry storms, how backoff+jitter+caps prevent it, and how idempotency changes the safety model."
+      },
+      {
+        "title": "Axios isn’t just fetch — here’s how I designed a client",
+        "topicsCovered": ["T09", "T22", "T25", "T36"],
+        "linkedFeatures": ["F3"],
+        "gist": "Walk through request lifecycle, interceptors, cancellation, retry policy, and typed endpoint design for an SDK."
+      },
+      {
+        "title": "Why idempotency matters more than you think",
+        "topicsCovered": ["T09", "T24", "T25"],
+        "linkedFeatures": ["F1", "F3"],
+        "gist": "Explain why production systems must assume retries and duplicates, and how idempotency keys keep writes safe."
+      },
+      {
+        "title": "WebSockets: when they help and when they hurt",
+        "topicsCovered": ["T09", "T22", "T33"],
+        "linkedFeatures": ["F4"],
+        "gist": "Discuss connection lifecycle, operational cost, backpressure, and alternative patterns like SSE or polling."
+      },
+      {
+        "title": "CORS demystified with real examples",
+        "topicsCovered": ["T09"],
+        "linkedFeatures": ["F1", "F3"],
+        "gist": "Explain preflight, headers, credentialed requests, and common configuration mistakes with real requests and responses."
+      },
+      {
+        "title": "Designing APIs that survive versioning",
+        "topicsCovered": ["T25", "T09"],
+        "linkedFeatures": ["F1"],
+        "gist": "Explain backward compatibility, breaking-change avoidance, and versioning strategy that doesn’t ruin clients."
+      },
+      {
+        "title": "Failure is normal — how I designed for it",
+        "topicsCovered": ["T22", "T24", "T36"],
+        "linkedFeatures": ["F6", "F5", "F4"],
+        "gist": "Show partial failures, timeouts-everywhere philosophy, circuit breakers, and safe production debugging methodology."
+      }
+    ],
+    "executionGuidelines": [
+      "Every retry policy must define: what to retry, max attempts, backoff strategy, and cancellation behavior",
+      "No retries on unsafe operations without idempotency keys",
+      "Every endpoint must have explicit timeouts and meaningful status codes",
+      "All auth flows must document session/token storage and rotation assumptions",
+      "WebSocket must implement heartbeat + reconnect + backpressure controls",
+      "Simulated failures must be reproducible and quickly disable-able (kill switch)",
+      "Instrument-before-guessing during debugging; document evidence and hypothesis"
+    ],
+    "successCriteria": [
+      "Can explain full HTTP request lifecycle including headers, cookies, and CORS preflight",
+      "Can demonstrate retry storms and prevent them with backoff+jitter+idempotency",
+      "Can publish a typed Axios SDK with cancellation and safe retry defaults",
+      "Can demonstrate WebSocket reconnect and heartbeat behavior under real network drops",
+      "Can show circuit breaker behavior under downstream failures",
+      "Can reproduce and debug a production-like issue using hypothesis-driven debugging"
+    ],
+    "status": {
+      "started": false,
+      "completed": false,
+      "lastUpdated": null
+    }
+  },
+  {
+    "projectId": "P3",
+    "name": "Build Systems & Tooling Deep Dive",
+    "type": "Infra + build engineering",
+    "purpose": "Understand bundlers, module systems, source maps, CI pipelines, release safety mechanisms, and DX practices by building and shipping the same app through different build systems.",
+    "details": "A tooling-first project where you build the same small React app twice: once with Vite and once with Webpack (manual configuration). You also create a simple custom build plugin, validate source map debugging, and implement a CI pipeline that enforces quality without slowing developers. Finally, you simulate feature flags and progressive delivery (canary-style) to practice release engineering fundamentals.",
+    "outcome": "Ability to explain what bundlers do, how modern dev servers differ from production bundling, how to debug production issues using source maps, and how to design a CI/release pipeline with reproducible builds and deployment safety practices.",
+    "topicsCovered": ["T08", "T16", "T29", "T34", "T31"],
+    "techStack": {
+      "frontend": ["React", "TypeScript"],
+      "buildSystems": ["Vite", "Webpack"],
+      "linting": ["ESLint"],
+      "formatting": ["Prettier"],
+      "testing": ["Jest", "React Testing Library"],
+      "ci": ["GitHub Actions"],
+      "release": [
+        "Feature flags (simple config-driven)",
+        "Canary simulation (environment-based routing)"
+      ],
+      "optional": ["Changesets (versioning)", "Docker (build parity)"]
+    },
+    "architecturePrinciples": [
+      "Same app, different build pipelines (controlled comparison)",
+      "Build artifacts must be reproducible and traceable",
+      "Source maps are part of production readiness",
+      "CI must be fast and consistent to improve DX",
+      "Release mechanisms must reduce blast radius"
+    ],
+    "features": [
+      {
+        "featureId": "F1",
+        "name": "Baseline app (shared requirements)",
+        "description": "A small app with identical functionality across both builds to make comparisons meaningful.",
+        "topicsCovered": ["T08", "T34"],
+        "implementationNotes": [
+          "Keep app intentionally small but non-trivial (routes + state + async fetch)",
+          "Define a single requirements checklist that both builds must satisfy"
+        ],
+        "pitfallsToAvoid": [
+          "Comparing builds using different app features",
+          "Adding app complexity that distracts from build learnings"
+        ]
+      },
+      {
+        "featureId": "F2",
+        "name": "Vite build setup",
+        "description": "Set up the baseline app with Vite and document dev server behavior, HMR, and production bundling output.",
+        "topicsCovered": ["T08"],
+        "implementationNotes": [
+          "Inspect dev server behavior and module resolution",
+          "Inspect final build output and chunking"
+        ],
+        "pitfallsToAvoid": [
+          "Treating Vite as a black box",
+          "Not measuring output differences"
+        ]
+      },
+      {
+        "featureId": "F3",
+        "name": "Webpack build setup (manual config)",
+        "description": "Build the same app with Webpack using manual configuration for entry, output, loaders, and plugins.",
+        "topicsCovered": ["T08"],
+        "implementationNotes": [
+          "Implement loaders for TS/JS, CSS, assets",
+          "Set up dev server + HMR (if feasible) for parity",
+          "Implement code splitting and compare to Vite output"
+        ],
+        "pitfallsToAvoid": [
+          "Copy-pasting configs without understanding",
+          "Skipping loader/plugin reasoning"
+        ]
+      },
+      {
+        "featureId": "F4",
+        "name": "Custom build plugin",
+        "description": "Build a small custom plugin (Vite or Webpack) to understand plugin hooks and build-time transformations.",
+        "topicsCovered": ["T08", "T34"],
+        "implementationNotes": [
+          "Example: inject build metadata, enforce environment checks, or transform imports",
+          "Document the exact stage where plugin runs"
+        ],
+        "pitfallsToAvoid": [
+          "Over-engineering plugin complexity",
+          "Not demonstrating what hook phases mean"
+        ]
+      },
+      {
+        "featureId": "F5",
+        "name": "Source map debugging workflow",
+        "description": "Intentionally ship an error and use source maps to locate the original TS/JS source of the bug.",
+        "topicsCovered": ["T08", "T29", "T36"],
+        "implementationNotes": [
+          "Generate source maps in production build",
+          "Reproduce a minified stack trace and map it back",
+          "Document the debugging steps and evidence"
+        ],
+        "pitfallsToAvoid": [
+          "Relying on guesswork instead of mapped stack traces",
+          "Shipping source maps without understanding exposure risk"
+        ]
+      },
+      {
+        "featureId": "F6",
+        "name": "CI pipeline (lint, typecheck, test, build)",
+        "description": "Create a CI pipeline that enforces quality gates without becoming slow or flaky.",
+        "topicsCovered": ["T16", "T34"],
+        "implementationNotes": [
+          "Run lint + typecheck in parallel when possible",
+          "Cache dependencies/build outputs for speed",
+          "Fail fast on quick checks"
+        ],
+        "pitfallsToAvoid": [
+          "Slow pipelines that devs learn to bypass",
+          "Non-deterministic builds caused by unpinned tooling"
+        ]
+      },
+      {
+        "featureId": "F7",
+        "name": "Feature flags",
+        "description": "Implement feature flags that decouple deployment from release and support safe toggling.",
+        "topicsCovered": ["T29", "T31"],
+        "implementationNotes": [
+          "Flags must be configuration-driven",
+          "Support runtime config changes where possible"
+        ],
+        "pitfallsToAvoid": [
+          "Flag debt (flags never removed)",
+          "Build-time only flags that force redeploys"
+        ]
+      },
+      {
+        "featureId": "F8",
+        "name": "Canary release simulation",
+        "description": "Simulate progressive delivery by routing a small percent of traffic (or a subset of users) to a new build.",
+        "topicsCovered": ["T29", "T16"],
+        "implementationNotes": [
+          "Use environment-based routing or a small proxy simulator",
+          "Define health checks/criteria for canary success",
+          "Document rollback vs roll-forward decision rules"
+        ],
+        "pitfallsToAvoid": [
+          "No measurable canary criteria",
+          "Promoting canary without evidence"
+        ]
+      }
+    ],
+    "userFlows": [
+      {
+        "flowId": "UF1",
+        "name": "Compare build outputs (Vite vs Webpack)",
+        "steps": [
+          "Run dev server in Vite and observe HMR behavior",
+          "Run dev server in Webpack (or build/watch) and observe behavior",
+          "Build production bundles in both setups",
+          "Compare chunking, bundle size, and source maps"
+        ]
+      },
+      {
+        "flowId": "UF2",
+        "name": "Production debug with source maps",
+        "steps": [
+          "Introduce a controlled bug",
+          "Generate a production build",
+          "Capture a minified stack trace",
+          "Use source maps to pinpoint original source",
+          "Apply fix and verify"
+        ]
+      },
+      {
+        "flowId": "UF3",
+        "name": "CI gate to release simulation",
+        "steps": [
+          "Commit changes",
+          "CI runs lint/typecheck/test/build",
+          "Artifacts are produced",
+          "Feature flag controls exposure",
+          "Canary simulation routes subset to new build",
+          "Decision made: promote or revert"
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "pageId": "PAGE1",
+        "name": "App Home (Baseline Feature Demo)",
+        "route": "/",
+        "features": ["F1"],
+        "topicsDemonstrated": ["T34"]
+      },
+      {
+        "pageId": "PAGE2",
+        "name": "Build Info Page",
+        "route": "/build-info",
+        "features": ["F4", "F5"],
+        "topicsDemonstrated": ["T08", "T29", "T36"]
+      },
+      {
+        "pageId": "PAGE3",
+        "name": "Feature Flag Demo Page",
+        "route": "/flags",
+        "features": ["F7"],
+        "topicsDemonstrated": ["T29", "T31"]
+      }
+    ],
+    "blogs": [
+      {
+        "title": "Why bundlers exist (and what they actually do)",
+        "topicsCovered": ["T08"],
+        "linkedFeatures": ["F2", "F3"],
+        "gist": "Explain module systems, dependency graphs, bundling, transforms, tree-shaking, and why dev/prod pipelines differ."
+      },
+      {
+        "title": "Vite vs Webpack from first principles",
+        "topicsCovered": ["T08"],
+        "linkedFeatures": ["F2", "F3"],
+        "gist": "Compare the mental models: dev server architecture, HMR, build output, and plugin systems."
+      },
+      {
+        "title": "Source maps saved my production debug",
+        "topicsCovered": ["T08", "T29", "T36"],
+        "linkedFeatures": ["F5"],
+        "gist": "Show a real minified stack trace and how source maps led to the true root cause."
+      },
+      {
+        "title": "How I designed a CI pipeline that doesn’t slow devs",
+        "topicsCovered": ["T16", "T34"],
+        "linkedFeatures": ["F6"],
+        "gist": "Explain fast pipelines, caching, parallelization, and fail-fast gating that improves DX."
+      },
+      {
+        "title": "DX is a feature — here’s how I improved it",
+        "topicsCovered": ["T34"],
+        "linkedFeatures": ["F6", "F4"],
+        "gist": "Show how consistent tooling, scripts, and internal automation reduce friction."
+      },
+      {
+        "title": "Release engineering is underrated",
+        "topicsCovered": ["T29", "T16", "T31"],
+        "linkedFeatures": ["F7", "F8"],
+        "gist": "Explain reproducibility, artifacts, flags, canary simulation, and why release safety is a skill."
+      }
+    ],
+    "executionGuidelines": [
+      "Keep the application feature set identical across Vite and Webpack builds to ensure fair comparison",
+      "Document every Webpack loader/plugin choice with a reason tied to the module graph or asset pipeline",
+      "Source-map debugging must be done using evidence (mapped stack traces), not assumptions",
+      "CI steps must be ordered and optimized for feedback speed (fail fast on lint/typecheck)",
+      "Canary simulation must define success criteria before rollout",
+      "Feature flags must include cleanup plans to avoid long-term flag debt",
+      "Environment parity principles must be respected (config vs code separation and drift control)"
+    ],
+    "successCriteria": [
+      "Can explain why bundlers exist and what they do to code and assets",
+      "Can describe Vite vs Webpack internals from a dependency-graph perspective",
+      "Can build and debug production errors using source maps end-to-end",
+      "Can implement a CI pipeline that is fast, deterministic, and trusted",
+      "Can simulate a release flow using feature flags and canary promotion criteria",
+      "Can articulate how DX improvements translate into real team velocity"
+    ],
+    "status": {
+      "started": false,
+      "completed": false,
+      "lastUpdated": null
+    }
+  },
+  {
+    "projectId": "P4",
+    "name": "Observability-First SaaS Backend",
+    "type": "Production backend",
+    "purpose": "Master observability as an engineering discipline: structured logging, metrics, tracing, alerting, performance analysis, and incident response.",
+    "details": "A backend service intentionally designed with observability as a first-class concern. The system emits structured logs, exposes metrics (RED/USE), propagates correlation IDs across requests, supports distributed tracing, and includes alerting and load testing. The goal is not feature richness but deep visibility into system behavior under normal and failure conditions.",
+    "outcome": "Ability to debug production issues quickly and safely using logs, metrics, and traces; design meaningful alerts; run load tests; and conduct blameless postmortems backed by real evidence.",
+    "topicsCovered": ["T13", "T28", "T12", "T22", "T24", "T33"],
+    "techStack": {
+      "backend": ["Node.js", "TypeScript", "Express (or Fastify)"],
+      "logging": ["Structured logger (e.g., pino/winston)"],
+      "metrics": ["Prometheus-style metrics"],
+      "tracing": ["OpenTelemetry"],
+      "errorTracking": ["Sentry (or equivalent)"],
+      "testing": ["k6 or Artillery (load testing)"],
+      "tooling": ["Docker", "Docker Compose"],
+      "optional": ["Grafana", "Jaeger/Tempo"]
+    },
+    "architecturePrinciples": [
+      "Observability is not an afterthought",
+      "Logs are structured data, not strings",
+      "Every request is traceable end-to-end",
+      "Metrics answer known questions; logs answer unknown ones",
+      "Alerting must minimize noise and maximize signal"
+    ],
+    "features": [
+      {
+        "featureId": "F1",
+        "name": "Structured logging",
+        "description": "Emit structured, machine-parsable logs with consistent fields across the system.",
+        "topicsCovered": ["T13", "T28"],
+        "implementationNotes": [
+          "Use JSON logs with fixed keys",
+          "Include requestId, userId (if applicable), and context"
+        ],
+        "pitfallsToAvoid": [
+          "Logging free-form strings",
+          "Inconsistent log schemas"
+        ]
+      },
+      {
+        "featureId": "F2",
+        "name": "Correlation IDs",
+        "description": "Propagate a correlation ID across requests, services, and logs.",
+        "topicsCovered": ["T13", "T28", "T22"],
+        "implementationNotes": [
+          "Generate or accept correlation ID at ingress",
+          "Attach ID to logs, metrics labels, and traces"
+        ],
+        "pitfallsToAvoid": [
+          "Dropping IDs at async boundaries",
+          "Generating multiple IDs per request"
+        ]
+      },
+      {
+        "featureId": "F3",
+        "name": "Metrics (RED / USE)",
+        "description": "Expose metrics following RED (requests, errors, duration) and USE (utilization, saturation, errors) models.",
+        "topicsCovered": ["T28", "T12", "T33"],
+        "implementationNotes": [
+          "Define service-level metrics first",
+          "Avoid high-cardinality labels"
+        ],
+        "pitfallsToAvoid": [
+          "Metric explosion",
+          "Measuring everything without purpose"
+        ]
+      },
+      {
+        "featureId": "F4",
+        "name": "Error tracking",
+        "description": "Capture unhandled exceptions and contextual metadata for debugging.",
+        "topicsCovered": ["T13", "T28"],
+        "implementationNotes": [
+          "Attach request context to errors",
+          "Group errors meaningfully"
+        ],
+        "pitfallsToAvoid": [
+          "Alerting on every error",
+          "Missing context in error reports"
+        ]
+      },
+      {
+        "featureId": "F5",
+        "name": "Alerting",
+        "description": "Define alerts based on symptoms, not causes, to reduce alert fatigue.",
+        "topicsCovered": ["T28", "T24"],
+        "implementationNotes": [
+          "Alert on SLO violations",
+          "Include runbook links"
+        ],
+        "pitfallsToAvoid": [
+          "Too many alerts",
+          "Alerts without actionable context"
+        ]
+      },
+      {
+        "featureId": "F6",
+        "name": "Load testing",
+        "description": "Apply load to the system to observe behavior under stress.",
+        "topicsCovered": ["T12", "T33"],
+        "implementationNotes": [
+          "Define realistic traffic patterns",
+          "Correlate load results with metrics and traces"
+        ],
+        "pitfallsToAvoid": [
+          "Unrealistic load profiles",
+          "Ignoring downstream dependencies"
+        ]
+      },
+      {
+        "featureId": "F7",
+        "name": "Postmortem documentation",
+        "description": "Document incidents with timelines, impact, root causes, and action items.",
+        "topicsCovered": ["T13", "T28", "T36"],
+        "implementationNotes": ["Blameless tone", "Focus on systemic causes"],
+        "pitfallsToAvoid": ["Assigning blame", "Skipping follow-up actions"]
+      }
+    ],
+    "userFlows": [
+      {
+        "flowId": "UF1",
+        "name": "Request tracing and debugging",
+        "steps": [
+          "Client sends request",
+          "Correlation ID assigned",
+          "Logs, metrics, and traces recorded",
+          "Developer traces request across components"
+        ]
+      },
+      {
+        "flowId": "UF2",
+        "name": "Incident and alert handling",
+        "steps": [
+          "Metric threshold breached",
+          "Alert triggered",
+          "Engineer investigates using dashboards and traces",
+          "Issue mitigated and documented"
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "pageId": "PAGE1",
+        "name": "Metrics Dashboard",
+        "route": "/metrics",
+        "features": ["F3"],
+        "topicsDemonstrated": ["T28", "T12"]
+      },
+      {
+        "pageId": "PAGE2",
+        "name": "Logs Explorer",
+        "route": "/logs",
+        "features": ["F1", "F2"],
+        "topicsDemonstrated": ["T13", "T28"]
+      },
+      {
+        "pageId": "PAGE3",
+        "name": "Postmortems",
+        "route": "/postmortems",
+        "features": ["F7"],
+        "topicsDemonstrated": ["T36"]
+      }
+    ],
+    "blogs": [
+      {
+        "title": "Logs vs metrics vs traces (finally understood)",
+        "topicsCovered": ["T13", "T28"],
+        "linkedFeatures": ["F1", "F3", "F4"],
+        "gist": "Clarify the role of each signal and when to use them together."
+      },
+      {
+        "title": "Why I stopped logging strings",
+        "topicsCovered": ["T13", "T28"],
+        "linkedFeatures": ["F1"],
+        "gist": "Explain the shift from text logs to structured, queryable data."
+      },
+      {
+        "title": "Observability is debugging in advance",
+        "topicsCovered": ["T28", "T36"],
+        "linkedFeatures": ["F1", "F2", "F3"],
+        "gist": "Show how good instrumentation prevents long debugging sessions."
+      },
+      {
+        "title": "How I traced a production issue in minutes",
+        "topicsCovered": ["T13", "T22", "T36"],
+        "linkedFeatures": ["F2", "F4"],
+        "gist": "Walk through a real trace-based investigation."
+      },
+      {
+        "title": "Alert fatigue is a design bug",
+        "topicsCovered": ["T28", "T24"],
+        "linkedFeatures": ["F5"],
+        "gist": "Explain how bad alert design harms reliability."
+      },
+      {
+        "title": "Writing postmortems without blame",
+        "topicsCovered": ["T36"],
+        "linkedFeatures": ["F7"],
+        "gist": "Show how blameless postmortems drive learning instead of fear."
+      }
+    ],
+    "executionGuidelines": [
+      "Every request must be traceable via a correlation ID",
+      "Logs, metrics, and traces must be consistent and linkable",
+      "Alerts must map to user impact or SLO breaches",
+      "Load testing results must be correlated with observability data",
+      "All incidents must result in a documented postmortem"
+    ],
+    "successCriteria": [
+      "Can debug a production issue using logs, metrics, and traces together",
+      "Can design alerts that fire only on actionable conditions",
+      "Can explain RED and USE metrics with real examples",
+      "Can run load tests and interpret results meaningfully",
+      "Can produce a clear, blameless postmortem with follow-up actions"
+    ],
+    "status": {
+      "started": false,
+      "completed": false,
+      "lastUpdated": null
+    }
+  },
+  {
+    "projectId": "P5",
+    "name": "Cloud-Native SaaS (End-to-End)",
+    "type": "Full SaaS MVP",
+    "purpose": "Build, deploy, and operate a real cloud-native SaaS on AWS with security, scalability, CI/CD, and cost awareness from day one.",
+    "details": "An end-to-end SaaS MVP that goes from localhost to production. This project emphasizes real deployment concerns: infrastructure as code, auth and security, database migrations, caching, background jobs, safe deploy strategies, backups, and cost controls. The goal is not feature richness but correctness, operability, and survivability in production.",
+    "outcome": "Demonstrable ability to design, deploy, secure, scale, and operate a SaaS system on AWS. Clear proof of cloud, DevOps, security, migration, and architectural decision-making skills suitable for senior/staff roles.",
+    "topicsCovered": ["T11", "T15", "T16", "T17", "T18", "T30", "T31", "T35"],
+    "techStack": {
+      "frontend": ["React", "TypeScript"],
+      "backend": ["Node.js", "TypeScript", "Express or Fastify"],
+      "database": ["PostgreSQL"],
+      "cache": ["Redis"],
+      "auth": ["Cookie-based auth", "JWT (access + refresh)"],
+      "payments": ["Stripe (mocked or test mode)"],
+      "backgroundJobs": ["Queue system (e.g., BullMQ or SQS)"],
+      "cloud": ["AWS"],
+      "infra": ["Terraform or AWS CDK"],
+      "ciCd": ["GitHub Actions"],
+      "deployment": ["Blue-green deployment strategy"],
+      "storage": ["S3 (assets, backups)"],
+      "monitoring": ["Basic logs + metrics"],
+      "optional": ["CloudFront", "RDS", "Secrets Manager"]
+    },
+    "architecturePrinciples": [
+      "Monolith first, modular boundaries inside",
+      "Security and secrets never hard-coded",
+      "Infrastructure is reproducible and versioned",
+      "Deployments must be reversible",
+      "Costs are tracked and constrained early",
+      "Operational simplicity beats premature scale"
+    ],
+    "features": [
+      {
+        "featureId": "F1",
+        "name": "Authentication system",
+        "description": "Secure authentication with session or token-based flows suitable for production.",
+        "topicsCovered": ["T15", "T30", "T18"],
+        "implementationNotes": [
+          "Use httpOnly cookies or short-lived JWTs",
+          "Protect against session fixation and replay at a high level",
+          "Centralize auth middleware"
+        ],
+        "pitfallsToAvoid": [
+          "Storing secrets in code",
+          "Overcomplicated auth flows early"
+        ]
+      },
+      {
+        "featureId": "F2",
+        "name": "Payments (mocked or test mode)",
+        "description": "Integrate a payment provider in test or mocked mode to design payment boundaries safely.",
+        "topicsCovered": ["T18", "T35"],
+        "implementationNotes": [
+          "Abstract payment logic behind a service interface",
+          "Design for future replacement or expansion"
+        ],
+        "pitfallsToAvoid": ["Coupling core logic directly to payment SDKs"]
+      },
+      {
+        "featureId": "F3",
+        "name": "Database migrations",
+        "description": "Safe schema migrations that support continuous deployment.",
+        "topicsCovered": ["T11", "T35"],
+        "implementationNotes": [
+          "Backward-compatible migrations",
+          "One-way, idempotent migration scripts"
+        ],
+        "pitfallsToAvoid": [
+          "Destructive migrations in production",
+          "Manual schema changes"
+        ]
+      },
+      {
+        "featureId": "F4",
+        "name": "Caching layer",
+        "description": "Introduce caching to improve performance and reduce database load.",
+        "topicsCovered": ["T11", "T18"],
+        "implementationNotes": [
+          "Cache-aside strategy",
+          "Explicit TTLs and invalidation rules"
+        ],
+        "pitfallsToAvoid": [
+          "Caching without invalidation strategy",
+          "Treating cache as source of truth"
+        ]
+      },
+      {
+        "featureId": "F5",
+        "name": "Background jobs",
+        "description": "Asynchronous job processing for non-blocking tasks.",
+        "topicsCovered": ["T11", "T18"],
+        "implementationNotes": [
+          "Use queues for retries and isolation",
+          "Ensure idempotent job handlers"
+        ],
+        "pitfallsToAvoid": [
+          "Doing heavy work in request path",
+          "Unbounded retries"
+        ]
+      },
+      {
+        "featureId": "F6",
+        "name": "Infrastructure as Code (IaC)",
+        "description": "Define cloud infrastructure declaratively using Terraform or CDK.",
+        "topicsCovered": ["T31", "T17"],
+        "implementationNotes": [
+          "Separate environments (dev/staging/prod)",
+          "No manual cloud changes"
+        ],
+        "pitfallsToAvoid": [
+          "Environment drift",
+          "Hard-coded environment values"
+        ]
+      },
+      {
+        "featureId": "F7",
+        "name": "Blue-green deployments",
+        "description": "Zero-downtime deployment strategy with safe rollbacks.",
+        "topicsCovered": ["T16", "T35"],
+        "implementationNotes": [
+          "Health checks before traffic switch",
+          "Fast rollback path"
+        ],
+        "pitfallsToAvoid": ["Deploying without health validation"]
+      },
+      {
+        "featureId": "F8",
+        "name": "Cost controls",
+        "description": "Track and constrain cloud spending early.",
+        "topicsCovered": ["T17"],
+        "implementationNotes": [
+          "Use budgets and alerts",
+          "Prefer managed services where appropriate"
+        ],
+        "pitfallsToAvoid": [
+          "Over-provisioning resources",
+          "Ignoring idle costs"
+        ]
+      },
+      {
+        "featureId": "F9",
+        "name": "Backups and recovery",
+        "description": "Automated backups and verified restore procedures.",
+        "topicsCovered": ["T31", "T35"],
+        "implementationNotes": [
+          "Automated DB backups",
+          "Periodic restore tests"
+        ],
+        "pitfallsToAvoid": ["Untested backups", "No recovery documentation"]
+      }
+    ],
+    "userFlows": [
+      {
+        "flowId": "UF1",
+        "name": "User signup and login",
+        "steps": [
+          "User signs up",
+          "Credentials securely stored",
+          "User logs in",
+          "Authenticated session established"
+        ]
+      },
+      {
+        "flowId": "UF2",
+        "name": "Deployment lifecycle",
+        "steps": [
+          "Code merged to main",
+          "CI pipeline runs",
+          "New version deployed to green environment",
+          "Health checks pass",
+          "Traffic switches from blue to green"
+        ]
+      },
+      {
+        "flowId": "UF3",
+        "name": "Failure and recovery",
+        "steps": [
+          "Database failure simulated",
+          "Restore from backup",
+          "System returns to healthy state"
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "pageId": "PAGE1",
+        "name": "Auth Pages",
+        "route": "/auth/*",
+        "features": ["F1"],
+        "topicsDemonstrated": ["T15", "T30"]
+      },
+      {
+        "pageId": "PAGE2",
+        "name": "Admin / Ops Dashboard",
+        "route": "/admin",
+        "features": ["F6", "F7", "F8"],
+        "topicsDemonstrated": ["T17", "T31", "T35"]
+      }
+    ],
+    "blogs": [
+      {
+        "title": "From localhost to production: what actually changes",
+        "topicsCovered": ["T17", "T31"],
+        "linkedFeatures": ["F6", "F7"],
+        "gist": "Explain environment differences, infra concerns, and deployment realities."
+      },
+      {
+        "title": "Why my first deploy scared me",
+        "topicsCovered": ["T16", "T35"],
+        "linkedFeatures": ["F7"],
+        "gist": "Discuss fear, failure modes, and rollback strategies."
+      },
+      {
+        "title": "Scaling is mostly about saying no",
+        "topicsCovered": ["T18"],
+        "linkedFeatures": ["F4", "F5"],
+        "gist": "Explain architectural restraint and controlled growth."
+      },
+      {
+        "title": "Security mistakes I almost shipped",
+        "topicsCovered": ["T30"],
+        "linkedFeatures": ["F1"],
+        "gist": "Highlight near-miss security issues and how they were caught."
+      },
+      {
+        "title": "Why monoliths still win early",
+        "topicsCovered": ["T18"],
+        "linkedFeatures": ["F3", "F5"],
+        "gist": "Explain modular monolith advantages for early SaaS."
+      },
+      {
+        "title": "Zero-downtime deploys explained simply",
+        "topicsCovered": ["T16", "T35"],
+        "linkedFeatures": ["F7"],
+        "gist": "Explain blue-green deployment in simple terms."
+      },
+      {
+        "title": "What AWS services I actually needed",
+        "topicsCovered": ["T17"],
+        "linkedFeatures": ["F6"],
+        "gist": "Cut through AWS complexity and justify service choices."
+      },
+      {
+        "title": "Cost optimization for solo SaaS builders",
+        "topicsCovered": ["T17"],
+        "linkedFeatures": ["F8"],
+        "gist": "Explain practical cost controls and budgeting strategies."
+      }
+    ],
+    "executionGuidelines": [
+      "No manual changes in cloud environments; everything via IaC",
+      "Secrets must be managed via environment or secret managers",
+      "Every deploy must have a rollback plan",
+      "Backups must be tested, not just configured",
+      "Costs must be reviewed periodically, not after surprise bills",
+      "Security decisions must be documented explicitly"
+    ],
+    "successCriteria": [
+      "Can deploy a SaaS end-to-end on AWS",
+      "Can explain infrastructure and deployment decisions clearly",
+      "Can perform a zero-downtime deployment and rollback",
+      "Can recover from a simulated failure using backups",
+      "Can articulate tradeoffs between simplicity, scale, and cost"
+    ],
+    "status": {
+      "started": false,
+      "completed": false,
+      "lastUpdated": null
+    }
+  }
+]
