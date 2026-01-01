@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../ui/badge";
 import {
   getStatusText,
   getSubTaskDetailsText,
@@ -8,8 +8,8 @@ import {
 import { RiMoreFill } from "react-icons/ri";
 import { BsDot } from "react-icons/bs";
 import type { SubTask } from "@/interfaces/jsonTypes";
-import SubTaskDetailsDialog from "../dialogs/SubTaskDetailsDialog";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import SubTaskDetailsDialog from "../../dialogs/SubTaskDetailsDialog";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../../ui/tooltip";
 
 const SubTaskBody = ({ subTask }: { subTask: SubTask }) => {
   const { status, variant } = getStatusText(subTask.status);

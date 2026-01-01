@@ -1,6 +1,4 @@
-import type { LearningItem } from "@/interfaces/jsonTypes";
-
-export const learningData: LearningItem[] = [
+[
   {
     "id": "T01",
     "title": "Computer Science & Programming Fundamentals",
@@ -26,7 +24,7 @@ export const learningData: LearningItem[] = [
         "masteryCriteria": [
           {
             "criteria": "Can explain what a process is vs a thread in simple terms",
-            "mastered": true
+            "mastered": false
           },
           {
             "criteria": "Can explain why CPU-bound tasks block Node's event loop",
@@ -44,7 +42,7 @@ export const learningData: LearningItem[] = [
           },
           {
             "task": "Run multiple processes and compare with single process",
-            "completed": true
+            "completed": false
           },
           {
             "task": "Measure with simple timing logs",
@@ -59,8 +57,14 @@ export const learningData: LearningItem[] = [
             "status": "not-started"
           },
           {
-            "type": "notes",
+            "type": "doc",
             "label": "process-thread-io-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -117,6 +121,12 @@ export const learningData: LearningItem[] = [
             "label": "stack-heap-demos",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -162,8 +172,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "gc-reachability-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -213,6 +229,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "big-o-web-benchmarks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -268,6 +290,12 @@ export const learningData: LearningItem[] = [
             "label": "data-structures-in-web",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -317,8 +345,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "immutability-rulebook",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -370,6 +404,12 @@ export const learningData: LearningItem[] = [
             "label": "concurrency-parallelism-demos",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -417,6 +457,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "threads-vs-eventloop-node",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -489,8 +535,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "js-execution-context-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -542,6 +594,12 @@ export const learningData: LearningItem[] = [
             "label": "call-stack-demos",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -591,6 +649,12 @@ export const learningData: LearningItem[] = [
             "label": "event-loop-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -634,6 +698,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "tasks-vs-microtasks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -685,6 +755,12 @@ export const learningData: LearningItem[] = [
             "label": "promise-internals",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -726,8 +802,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "async-await-desugaring",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -779,6 +861,12 @@ export const learningData: LearningItem[] = [
             "label": "closure-pitfalls",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -816,8 +904,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "scope-chain-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -865,6 +959,12 @@ export const learningData: LearningItem[] = [
             "label": "hoisting-examples",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -908,6 +1008,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "prototype-chain-demos",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -955,6 +1061,12 @@ export const learningData: LearningItem[] = [
             "label": "this-binding-examples",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1000,6 +1112,12 @@ export const learningData: LearningItem[] = [
             "label": "js-memory-leaks",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1043,6 +1161,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "js-performance-traps",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1120,6 +1244,12 @@ export const learningData: LearningItem[] = [
             "label": "structural-typing-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1165,8 +1295,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "type-inference-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1218,6 +1354,12 @@ export const learningData: LearningItem[] = [
             "label": "unknown-vs-any",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1265,6 +1407,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "generics-constraints-defaults",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1316,6 +1464,12 @@ export const learningData: LearningItem[] = [
             "label": "utility-types-playground",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1363,6 +1517,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "discriminated-unions",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1414,6 +1574,12 @@ export const learningData: LearningItem[] = [
             "label": "type-narrowing-examples",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1461,6 +1627,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "custom-type-guards",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1512,6 +1684,12 @@ export const learningData: LearningItem[] = [
             "label": "branded-types",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1559,6 +1737,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "tsconfig-deep-dive",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1610,6 +1794,12 @@ export const learningData: LearningItem[] = [
             "label": "ts-api-contracts",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1659,6 +1849,12 @@ export const learningData: LearningItem[] = [
             "label": "typed-sdk-design",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1704,8 +1900,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "typing-guidelines",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1776,8 +1978,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "critical-rendering-path-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1829,6 +2037,12 @@ export const learningData: LearningItem[] = [
             "label": "layout-repaint-composite-demos",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1876,6 +2090,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "dom-vs-vdom-experiments",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -1927,6 +2147,12 @@ export const learningData: LearningItem[] = [
             "label": "browser-storage-playground",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -1974,6 +2200,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "browser-caching-experiments",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2025,6 +2257,12 @@ export const learningData: LearningItem[] = [
             "label": "service-worker-offline-demo",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2074,6 +2312,12 @@ export const learningData: LearningItem[] = [
             "label": "web-worker-demo",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2121,6 +2365,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "browser-security-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2196,6 +2446,12 @@ export const learningData: LearningItem[] = [
             "label": "jsx-compilation-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2245,6 +2501,12 @@ export const learningData: LearningItem[] = [
             "label": "reconciliation-key-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2290,8 +2552,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "render-vs-commit-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2343,6 +2611,12 @@ export const learningData: LearningItem[] = [
             "label": "strict-mode-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2390,6 +2664,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "controlled-uncontrolled-forms",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2441,6 +2721,12 @@ export const learningData: LearningItem[] = [
             "label": "hooks-rules-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2488,6 +2774,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "useeffect-mental-model",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2539,6 +2831,12 @@ export const learningData: LearningItem[] = [
             "label": "memoization-tradeoffs",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2586,6 +2884,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "context-performance",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2637,6 +2941,12 @@ export const learningData: LearningItem[] = [
             "label": "compound-components",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2684,6 +2994,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "render-props-pattern",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2735,6 +3051,12 @@ export const learningData: LearningItem[] = [
             "label": "error-boundaries-demo",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2783,6 +3105,12 @@ export const learningData: LearningItem[] = [
             "label": "suspense-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -2828,8 +3156,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "concurrent-react-notes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2879,6 +3213,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "server-client-components-demo",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -2957,6 +3297,12 @@ export const learningData: LearningItem[] = [
             "label": "state-vs-derived-audit",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3002,8 +3348,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "state-taxonomy-map",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3055,6 +3407,12 @@ export const learningData: LearningItem[] = [
             "label": "lifting-state-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3102,6 +3460,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "derived-state-memoization",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3153,6 +3517,12 @@ export const learningData: LearningItem[] = [
             "label": "global-state-audit",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3200,6 +3570,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "redux-toolkit-fundamentals",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3251,6 +3627,12 @@ export const learningData: LearningItem[] = [
             "label": "redux-selectors-performance",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3298,6 +3680,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "zustand-fundamentals",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3349,6 +3737,12 @@ export const learningData: LearningItem[] = [
             "label": "rerender-storm-fixes",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3394,8 +3788,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "state-debugging-playbook",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3472,6 +3872,12 @@ export const learningData: LearningItem[] = [
             "label": "css-cascade-specificity-examples",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3519,6 +3925,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "flexbox-vs-grid-layouts",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3570,6 +3982,12 @@ export const learningData: LearningItem[] = [
             "label": "responsive-design-strategies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3617,6 +4035,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "design-tokens-system",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3668,6 +4092,12 @@ export const learningData: LearningItem[] = [
             "label": "component-theming",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3715,6 +4145,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "css-in-js-tradeoffs",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3766,6 +4202,12 @@ export const learningData: LearningItem[] = [
             "label": "tailwind-evaluation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3815,6 +4257,12 @@ export const learningData: LearningItem[] = [
             "label": "accessibility-fixes",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -3862,6 +4310,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "dark-mode-architecture",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3936,8 +4390,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "why-bundlers-exist",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -3989,6 +4449,12 @@ export const learningData: LearningItem[] = [
             "label": "esm-vs-commonjs",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4036,6 +4502,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "vite-internals-experiments",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4087,6 +4559,12 @@ export const learningData: LearningItem[] = [
             "label": "webpack-internals",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4134,6 +4612,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "tree-shaking-experiments",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4185,6 +4669,12 @@ export const learningData: LearningItem[] = [
             "label": "code-splitting-strategies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4232,6 +4722,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "dynamic-imports",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4283,6 +4779,12 @@ export const learningData: LearningItem[] = [
             "label": "polyfill-configuration",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4330,6 +4832,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "env-vars-setup",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4381,6 +4889,12 @@ export const learningData: LearningItem[] = [
             "label": "source-maps-debugging",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4430,6 +4944,12 @@ export const learningData: LearningItem[] = [
             "label": "bundle-analysis",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4477,6 +4997,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "build-caching",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4550,8 +5076,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "http-fundamentals",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4599,8 +5131,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "request-lifecycle-map",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4652,6 +5190,12 @@ export const learningData: LearningItem[] = [
             "label": "http-headers-experiments",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4699,6 +5243,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "http-status-codes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4750,6 +5300,12 @@ export const learningData: LearningItem[] = [
             "label": "cors-preflight-debugging",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4799,6 +5355,12 @@ export const learningData: LearningItem[] = [
             "label": "cookies-vs-tokens",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4844,8 +5406,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "https-tls-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4897,6 +5465,12 @@ export const learningData: LearningItem[] = [
             "label": "rest-design-principles",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -4944,6 +5518,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "pagination-filtering",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -4995,6 +5575,12 @@ export const learningData: LearningItem[] = [
             "label": "idempotent-apis",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5042,6 +5628,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "rate-limiting",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5093,6 +5685,12 @@ export const learningData: LearningItem[] = [
             "label": "websocket-basics",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5140,6 +5738,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "sse-demo",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5191,6 +5795,12 @@ export const learningData: LearningItem[] = [
             "label": "polling-vs-streaming",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5238,6 +5848,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "retries-backoff",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5289,6 +5905,12 @@ export const learningData: LearningItem[] = [
             "label": "axios-internals",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5336,6 +5958,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "request-cancellation",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5409,8 +6037,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "node-event-loop",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5462,6 +6096,12 @@ export const learningData: LearningItem[] = [
             "label": "async-io-vs-cpu",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5509,6 +6149,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "express-internals",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5560,6 +6206,12 @@ export const learningData: LearningItem[] = [
             "label": "middleware-chains",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5607,6 +6259,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "error-handling-patterns",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5658,6 +6316,12 @@ export const learningData: LearningItem[] = [
             "label": "validation-strategies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5705,6 +6369,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "auth-flows",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5756,6 +6426,12 @@ export const learningData: LearningItem[] = [
             "label": "rbac-implementation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5803,6 +6479,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "background-jobs",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5854,6 +6536,12 @@ export const learningData: LearningItem[] = [
             "label": "queues",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5901,6 +6589,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "cron-jobs",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -5952,6 +6646,12 @@ export const learningData: LearningItem[] = [
             "label": "api-versioning",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -5999,6 +6699,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "schema-validation",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6072,8 +6778,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "relational-vs-nosql",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6125,6 +6837,12 @@ export const learningData: LearningItem[] = [
             "label": "schema-design",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6172,6 +6890,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "indexing-strategies",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6223,6 +6947,12 @@ export const learningData: LearningItem[] = [
             "label": "query-optimization",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6272,6 +7002,12 @@ export const learningData: LearningItem[] = [
             "label": "transactions",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6317,8 +7053,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "data-consistency",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6370,6 +7112,12 @@ export const learningData: LearningItem[] = [
             "label": "pagination-strategies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6417,6 +7165,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "soft-deletes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6468,6 +7222,12 @@ export const learningData: LearningItem[] = [
             "label": "db-migrations",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6515,6 +7275,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "backups-recovery",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6588,8 +7354,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "web-vitals-analysis",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6641,6 +7413,12 @@ export const learningData: LearningItem[] = [
             "label": "bundle-size-budgets",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6688,6 +7466,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "lazy-loading-strategies",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6739,6 +7523,12 @@ export const learningData: LearningItem[] = [
             "label": "image-optimization",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6786,6 +7576,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "cdn-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6837,6 +7633,12 @@ export const learningData: LearningItem[] = [
             "label": "server-caching",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6884,6 +7686,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "client-caching",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -6935,6 +7743,12 @@ export const learningData: LearningItem[] = [
             "label": "debounce-throttle",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -6984,6 +7798,12 @@ export const learningData: LearningItem[] = [
             "label": "load-testing-basics",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7029,8 +7849,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "bottleneck-analysis",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7080,6 +7906,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "profiling-tools",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7153,8 +7985,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "chrome-devtools-mastery",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7206,6 +8044,12 @@ export const learningData: LearningItem[] = [
             "label": "network-debugging",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7253,6 +8097,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "memory-profiling",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7304,6 +8154,12 @@ export const learningData: LearningItem[] = [
             "label": "flame-charts",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7349,8 +8205,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "logging-strategy",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7402,6 +8264,12 @@ export const learningData: LearningItem[] = [
             "label": "log-levels",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7447,8 +8315,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "metrics-logs-traces",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7500,6 +8374,12 @@ export const learningData: LearningItem[] = [
             "label": "error-tracking",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7545,8 +8425,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "alerting",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7594,8 +8480,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "root-cause-analysis",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7669,8 +8561,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "owasp-top-10",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7722,6 +8620,12 @@ export const learningData: LearningItem[] = [
             "label": "input-validation-security",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7771,6 +8675,12 @@ export const learningData: LearningItem[] = [
             "label": "auth-vulnerabilities",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7816,8 +8726,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "token-storage-risks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7869,6 +8785,12 @@ export const learningData: LearningItem[] = [
             "label": "secure-headers",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -7916,6 +8838,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "secrets-management",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -7967,6 +8895,12 @@ export const learningData: LearningItem[] = [
             "label": "rate-limiting-attacks",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8014,6 +8948,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "dependency-vulnerabilities",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8087,8 +9027,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "testing-pyramid",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8140,6 +9086,12 @@ export const learningData: LearningItem[] = [
             "label": "unit-tests",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8187,6 +9139,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "integration-tests",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8238,6 +9196,12 @@ export const learningData: LearningItem[] = [
             "label": "e2e-tests",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8285,6 +9249,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "mocking-strategies",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8336,6 +9306,12 @@ export const learningData: LearningItem[] = [
             "label": "contract-tests",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8385,6 +9361,12 @@ export const learningData: LearningItem[] = [
             "label": "test-data-management",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8430,8 +9412,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "flaky-test-handling",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8481,6 +9469,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "performance-testing-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8554,8 +9548,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "git-workflows",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8603,8 +9603,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "code-reviews",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8656,6 +9662,12 @@ export const learningData: LearningItem[] = [
             "label": "automated-pipelines",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8705,6 +9717,12 @@ export const learningData: LearningItem[] = [
             "label": "build-pipelines",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8750,8 +9768,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "environment-separation",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8803,6 +9827,12 @@ export const learningData: LearningItem[] = [
             "label": "secrets-in-ci",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8850,6 +9880,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "rollbacks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -8901,6 +9937,12 @@ export const learningData: LearningItem[] = [
             "label": "feature-flags",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -8948,6 +9990,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "canary-releases",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9021,8 +10069,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "dns-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9074,6 +10128,12 @@ export const learningData: LearningItem[] = [
             "label": "load-balancers",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9121,6 +10181,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "compute-options",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9173,6 +10239,12 @@ export const learningData: LearningItem[] = [
             "label": "storage-types",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9220,6 +10292,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "vpc-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9271,6 +10349,12 @@ export const learningData: LearningItem[] = [
             "label": "iam-basics",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9320,6 +10404,12 @@ export const learningData: LearningItem[] = [
             "label": "cloud-logging-monitoring",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9365,8 +10455,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "cost-optimization",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9416,6 +10512,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "scaling-strategies",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9489,8 +10591,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "monolith-vs-microservices",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9542,6 +10650,12 @@ export const learningData: LearningItem[] = [
             "label": "modular-monolith",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9589,6 +10703,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "event-driven-systems",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9640,6 +10760,12 @@ export const learningData: LearningItem[] = [
             "label": "api-gateways",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9689,6 +10815,12 @@ export const learningData: LearningItem[] = [
             "label": "caching-layers",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9734,8 +10866,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "failure-modes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9783,8 +10921,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "tradeoff-analysis",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -9836,6 +10980,12 @@ export const learningData: LearningItem[] = [
             "label": "architecture-diagrams",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9885,6 +11035,12 @@ export const learningData: LearningItem[] = [
             "label": "adrs",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -9930,8 +11086,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "evolutionary-architecture",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10009,6 +11171,12 @@ export const learningData: LearningItem[] = [
             "label": "high-quality-readme",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10056,6 +11224,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "doc",
             "label": "api-docs",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10107,6 +11281,12 @@ export const learningData: LearningItem[] = [
             "label": "architecture-docs",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10154,6 +11334,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "doc",
             "label": "decision-records",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10205,6 +11391,12 @@ export const learningData: LearningItem[] = [
             "label": "onboarding-docs",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10254,6 +11446,12 @@ export const learningData: LearningItem[] = [
             "label": "tech-proposals",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10299,8 +11497,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "async-communication",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10378,6 +11582,12 @@ export const learningData: LearningItem[] = [
             "label": "open-source-contributions",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10427,6 +11637,12 @@ export const learningData: LearningItem[] = [
             "label": "technical-blog",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10472,8 +11688,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "mentoring-juniors",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10521,8 +11743,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "system-ownership",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10570,8 +11798,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "cross-team-collaboration",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10619,8 +11853,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "product-thinking",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10668,8 +11908,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "business-awareness",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10717,8 +11963,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "saas-metrics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10792,8 +12044,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "process-vs-thread",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10841,8 +12099,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "context-switching",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10890,8 +12154,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "file-descriptors",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -10943,6 +12213,12 @@ export const learningData: LearningItem[] = [
             "label": "blocking-vs-nonblocking-io",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -10988,8 +12264,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "node-libuv",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11037,8 +12319,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "syscalls",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11086,8 +12374,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "memory-pages",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11139,6 +12433,12 @@ export const learningData: LearningItem[] = [
             "label": "cpu-bound-node",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -11184,8 +12484,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "os-limits",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11235,6 +12541,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "signals-timeouts",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11308,8 +12620,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "tcp-vs-udp",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11357,8 +12675,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "connection-lifecycle",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11406,8 +12730,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "head-of-line-blocking",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11455,8 +12785,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "http-versions",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11504,8 +12840,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "keep-alive",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11557,6 +12899,12 @@ export const learningData: LearningItem[] = [
             "label": "load-balancing-strategies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -11606,6 +12954,12 @@ export const learningData: LearningItem[] = [
             "label": "reverse-proxies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -11651,8 +13005,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "cdn-internals",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11700,8 +13060,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "nat-ip-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11749,8 +13115,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "dns-resolution-flow",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11798,8 +13170,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "latency-vs-throughput",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -11851,6 +13229,12 @@ export const learningData: LearningItem[] = [
             "label": "backpressure",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -11900,6 +13284,12 @@ export const learningData: LearningItem[] = [
             "label": "circuit-breakers",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -11945,8 +13335,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "timeouts-everywhere",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12024,6 +13420,12 @@ export const learningData: LearningItem[] = [
             "label": "cache-patterns",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12073,6 +13475,12 @@ export const learningData: LearningItem[] = [
             "label": "stale-while-revalidate",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12118,8 +13526,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "ttl-strategies",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12171,6 +13585,12 @@ export const learningData: LearningItem[] = [
             "label": "cache-invalidation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12216,8 +13636,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "client-vs-server-caching",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12269,6 +13695,12 @@ export const learningData: LearningItem[] = [
             "label": "cdn-caching-headers",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12316,6 +13748,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "redis-eviction",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12367,6 +13805,12 @@ export const learningData: LearningItem[] = [
             "label": "cache-stampede",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12412,8 +13856,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "negative-caching",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12461,8 +13911,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "consistency-vs-freshness",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12535,8 +13991,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "eventual-consistency",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12584,8 +14046,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "strong-consistency",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12633,8 +14101,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "cap-theorem",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12686,6 +14160,12 @@ export const learningData: LearningItem[] = [
             "label": "idempotent-operations",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12731,8 +14211,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "retry-storms",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12784,6 +14270,12 @@ export const learningData: LearningItem[] = [
             "label": "duplicate-message-handling",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12829,8 +14321,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "exactly-once-illusion",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12882,6 +14380,12 @@ export const learningData: LearningItem[] = [
             "label": "dead-letter-queues",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -12927,8 +14431,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "poison-messages",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -12976,8 +14486,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "partial-failures",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13025,8 +14541,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "time-synchronization",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13100,8 +14622,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "api-versioning",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13149,8 +14677,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "backward-compatibility",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13198,8 +14732,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "breaking-change-avoidance",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13251,6 +14791,12 @@ export const learningData: LearningItem[] = [
             "label": "openapi-specs",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13296,8 +14842,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "schema-evolution",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13349,6 +14901,12 @@ export const learningData: LearningItem[] = [
             "label": "consumer-driven-contracts",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13394,8 +14952,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "graphql-pros-cons",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13447,6 +15011,12 @@ export const learningData: LearningItem[] = [
             "label": "bff-pattern",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13496,6 +15066,12 @@ export const learningData: LearningItem[] = [
             "label": "pagination-correctness",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13543,6 +15119,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "filtering-at-scale",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13620,6 +15202,12 @@ export const learningData: LearningItem[] = [
             "label": "feature-based-structure",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13667,6 +15255,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "dependency-direction",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13718,6 +15312,12 @@ export const learningData: LearningItem[] = [
             "label": "ui-state-isolation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13767,6 +15367,12 @@ export const learningData: LearningItem[] = [
             "label": "design-system-governance",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13812,8 +15418,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "shared-vs-local-components",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13861,8 +15473,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "micro-frontends",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -13914,6 +15532,12 @@ export const learningData: LearningItem[] = [
             "label": "module-boundaries",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -13959,8 +15583,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "build-vs-runtime-config",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14010,6 +15640,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "doc",
             "label": "code-ownership",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14083,8 +15719,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "heap-snapshot-analysis",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14132,8 +15774,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "retained-object-trees",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14185,6 +15833,12 @@ export const learningData: LearningItem[] = [
             "label": "event-listener-leaks",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -14230,8 +15884,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "closure-leaks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14283,6 +15943,12 @@ export const learningData: LearningItem[] = [
             "label": "detached-dom-nodes",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -14328,8 +15994,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "long-lived-references",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14381,6 +16053,12 @@ export const learningData: LearningItem[] = [
             "label": "node-memory-profiling",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -14426,8 +16104,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "fd-leaks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14475,8 +16159,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "zombie-processes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14554,6 +16244,12 @@ export const learningData: LearningItem[] = [
             "label": "structured-logging",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -14601,6 +16297,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "correlation-ids",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14652,6 +16354,12 @@ export const learningData: LearningItem[] = [
             "label": "distributed-tracing",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -14697,8 +16405,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "red-use-metrics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14746,8 +16460,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "cardinality-control",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14795,8 +16515,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "log-sampling",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14844,8 +16570,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "alert-fatigue",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14897,6 +16629,12 @@ export const learningData: LearningItem[] = [
             "label": "slos-vs-slas",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -14942,8 +16680,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "error-budgets",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -14993,6 +16737,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "doc",
             "label": "postmortems",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15070,6 +16820,12 @@ export const learningData: LearningItem[] = [
             "label": "deterministic-builds",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15115,8 +16871,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "build-reproducibility",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15168,6 +16930,12 @@ export const learningData: LearningItem[] = [
             "label": "artifact-storage",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15215,6 +16983,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "release-pipelines",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15266,6 +17040,12 @@ export const learningData: LearningItem[] = [
             "label": "feature-flags",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15313,6 +17093,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "blue-green-deployments",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15364,6 +17150,12 @@ export const learningData: LearningItem[] = [
             "label": "canary-releases",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15409,8 +17201,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "schema-migration-safety",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15462,6 +17260,12 @@ export const learningData: LearningItem[] = [
             "label": "zero-downtime-deploys",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15507,8 +17311,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "roll-forward-vs-rollback",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15585,6 +17395,12 @@ export const learningData: LearningItem[] = [
             "label": "threat-model",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15630,8 +17446,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "attack-surface",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15683,6 +17505,12 @@ export const learningData: LearningItem[] = [
             "label": "token-rotation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15728,8 +17556,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "session-fixation",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15781,6 +17615,12 @@ export const learningData: LearningItem[] = [
             "label": "replay-attacks",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15826,8 +17666,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "rate-limit-evasion",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15879,6 +17725,12 @@ export const learningData: LearningItem[] = [
             "label": "secrets-rotation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -15924,8 +17776,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "supply-chain-attacks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -15977,6 +17835,12 @@ export const learningData: LearningItem[] = [
             "label": "dependency-audits",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -16022,8 +17886,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "sandbox-escapes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16096,8 +17966,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "iac-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16145,8 +18021,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "environment-drift",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16194,8 +18076,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "config-vs-code",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16247,6 +18135,12 @@ export const learningData: LearningItem[] = [
             "label": "secret-management",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -16296,6 +18190,12 @@ export const learningData: LearningItem[] = [
             "label": "infrastructure-testing",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -16341,8 +18241,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "multi-region-basics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16394,6 +18300,12 @@ export const learningData: LearningItem[] = [
             "label": "disaster-recovery",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -16439,8 +18351,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "backup-verification",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16514,8 +18432,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "cross-browser-differences",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16563,8 +18487,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "mobile-constraints",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16612,8 +18542,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "low-memory-devices",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16665,6 +18601,12 @@ export const learningData: LearningItem[] = [
             "label": "offline-first",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -16710,8 +18652,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "network-flakiness",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16759,8 +18707,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "accessibility-edge-cases",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16808,8 +18762,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "i18n-pitfalls",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16857,8 +18817,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "timezone-locale-bugs",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16932,8 +18898,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "thundering-herd",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -16985,6 +18957,12 @@ export const learningData: LearningItem[] = [
             "label": "n-plus-one",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17030,8 +19008,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "waterfall-loading",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17083,6 +19067,12 @@ export const learningData: LearningItem[] = [
             "label": "hydration-bottlenecks",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17128,8 +19118,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "over-fetching",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17181,6 +19177,12 @@ export const learningData: LearningItem[] = [
             "label": "excessive-rerenders",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17226,8 +19228,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "lock-contention",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17275,8 +19283,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "queue-saturation",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17353,6 +19367,12 @@ export const learningData: LearningItem[] = [
             "label": "fast-local-setup",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17398,8 +19418,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "consistent-tooling",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17447,8 +19473,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "mono-vs-multi",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17500,6 +19532,12 @@ export const learningData: LearningItem[] = [
             "label": "code-generation",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17547,6 +19585,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "pre-commit-hooks",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17598,6 +19642,12 @@ export const learningData: LearningItem[] = [
             "label": "lint-rule-design",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17647,6 +19697,12 @@ export const learningData: LearningItem[] = [
             "label": "internal-cli-tools",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17694,6 +19750,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "repo",
             "label": "docs-as-code",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17770,6 +19832,12 @@ export const learningData: LearningItem[] = [
             "label": "incremental-refactors",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17815,8 +19883,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "strangler-fig",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17864,8 +19938,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "schema-migration-safety",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -17917,6 +19997,12 @@ export const learningData: LearningItem[] = [
             "label": "feature-parity",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -17962,8 +20048,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "dual-writes",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -18015,6 +20107,12 @@ export const learningData: LearningItem[] = [
             "label": "kill-switches",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -18062,6 +20160,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "doc",
             "label": "migration-risk-management",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -18135,8 +20239,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "hypothesis-driven-debugging",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -18184,8 +20294,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "binary-search-debugging",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -18233,8 +20349,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "production-debugging",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -18286,6 +20408,12 @@ export const learningData: LearningItem[] = [
             "label": "reproduction-strategies",
             "url": "",
             "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
+            "url": "",
+            "status": "not-started"
           }
         ],
         "references": [
@@ -18331,8 +20459,14 @@ export const learningData: LearningItem[] = [
         ],
         "artifacts": [
           {
-            "type": "notes",
+            "type": "doc",
             "label": "instrument-before-guessing",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }
@@ -18382,6 +20516,12 @@ export const learningData: LearningItem[] = [
           {
             "type": "doc",
             "label": "post-incident-forensics",
+            "url": "",
+            "status": "not-started"
+          },
+          {
+            "type": "notes",
+            "label": "dev-notes",
             "url": "",
             "status": "not-started"
           }

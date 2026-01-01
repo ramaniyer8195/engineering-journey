@@ -4,7 +4,7 @@ import Topic from "./Topic";
 
 const Learning = () => {
   return (
-    <div className="max-h-[86vh] overflow-y-auto overflow-x-hidden pr-3">
+    <div className="h-[86vh] overflow-y-auto overflow-x-hidden pr-3">
       <Accordion
         type="single"
         collapsible
