@@ -278,7 +278,7 @@
         "url": ""
       },
       {
-        "title": "useEffect is not lifecycle — here’s the real model",
+        "title": "useEffect is not lifecycle — here's the real model",
         "gist": "Explain effects as synchronization, not lifecycle.",
         "published": false,
         "url": ""
@@ -356,37 +356,39 @@
         "Express"
       ],
       "api": [
-        "OpenAPI (Swagger)"
+        "OpenAPI"
       ],
       "auth": [
-        "Cookies (httpOnly)",
+        "Cookies",
         "JWT access token",
         "Refresh token strategy"
       ],
       "database": [
-        "PostgreSQL (or MongoDB if preferred)"
+        "PostgreSQL",
+        "MongoDB"
       ],
       "realtime": [
-        "WebSocket (ws)"
+        "WebSocket"
       ],
       "clientSdk": [
         "Axios",
-        "TypeScript SDK packaging"
+        "TypeScript SDK"
       ],
       "resilience": [
         "Rate limiting middleware",
-        "Circuit breaker (library or custom)"
+        "Circuit breaker"
       ],
       "testing": [
         "Jest",
         "Supertest",
-        "k6 (optional load)"
+        "k6"
       ],
       "tooling": [
         "ESLint",
         "Prettier",
-        "dotenv / env validation",
-        "Postman/Insomnia"
+        "dotenv",
+        "Postman",
+        "Insomnia"
       ]
     },
     "architecturePrinciples": [
@@ -500,7 +502,7 @@
           "Return meaningful status codes and retry-after hints"
         ],
         "pitfallsToAvoid": [
-          "Naive rate limiting that’s easy to evade",
+          "Naive rate limiting that's easy to evade",
           "Circuit breaker without observability signals",
           "No differentiation between burst vs sustained abuse"
         ]
@@ -518,7 +520,7 @@
         "implementationNotes": [
           "Toggle failures by endpoint and percentage",
           "Simulate timeout vs slow response separately",
-          "Provide a ‘safe mode’ kill switch to disable chaos instantly"
+          "Provide a 'safe mode' kill switch to disable chaos instantly"
         ],
         "pitfallsToAvoid": [
           "Uncontrolled chaos in normal flows",
@@ -656,7 +658,7 @@
         "url": ""
       },
       {
-        "title": "Axios isn’t just fetch — here’s how I designed a client",
+        "title": "Axios isn't just fetch — here's how I designed a client",
         "gist": "Walk through request lifecycle, interceptors, cancellation, retry policy, and typed endpoint design for an SDK.",
         "published": false,
         "url": ""
@@ -681,7 +683,7 @@
       },
       {
         "title": "Designing APIs that survive versioning",
-        "gist": "Explain backward compatibility, breaking-change avoidance, and versioning strategy that doesn’t ruin clients.",
+        "gist": "Explain backward compatibility, breaking-change avoidance, and versioning strategy that doesn't ruin clients.",
         "published": false,
         "url": ""
       },
@@ -750,12 +752,12 @@
         "GitHub Actions"
       ],
       "release": [
-        "Feature flags (simple config-driven)",
-        "Canary simulation (environment-based routing)"
+        "Feature flags",
+        "Canary simulation"
       ],
       "optional": [
-        "Changesets (versioning)",
-        "Docker (build parity)"
+        "Changesets",
+        "Docker"
       ]
     },
     "architecturePrinciples": [
@@ -1000,13 +1002,13 @@
         "url": ""
       },
       {
-        "title": "How I designed a CI pipeline that doesn’t slow devs",
+        "title": "How I designed a CI pipeline that doesn't slow devs",
         "gist": "Explain fast pipelines, caching, parallelization, and fail-fast gating that improves DX.",
         "published": false,
         "url": ""
       },
       {
-        "title": "DX is a feature — here’s how I improved it",
+        "title": "DX is a feature — here's how I improved it",
         "gist": "Show how consistent tooling, scripts, and internal automation reduce friction.",
         "published": false,
         "url": ""
@@ -1060,16 +1062,17 @@
       "backend": [
         "Node.js",
         "TypeScript",
-        "Express (or Fastify)"
+        "Express"
       ],
       "observability": [
-        "Structured logger (e.g., pino/winston)",
-        "Prometheus-style metrics",
+        "Structured logger",
+        "Prometheus",
         "OpenTelemetry",
-        "Sentry (or equivalent)"
+        "Sentry"
       ],
       "testing": [
-        "k6 or Artillery (load testing)"
+        "k6",
+        "Artillery"
       ],
       "tooling": [
         "Docker",
@@ -1364,29 +1367,33 @@
       ],
       "auth": [
         "Cookie-based auth",
-        "JWT (access + refresh)"
+        "JWT"
       ],
       "payments": [
-        "Stripe (mocked or test mode)"
+        "Stripe"
       ],
       "backgroundJobs": [
-        "Queue system (e.g., BullMQ or SQS)"
+        "BullMQ",
+        "SQS"
       ],
       "cloud": [
         "AWS"
       ],
       "infra": [
-        "Terraform or AWS CDK"
+        "Terraform",
+        "AWS CDK"
       ],
       "ci_cd": [
         "GitHub Actions",
         "Blue-green deployment strategy"
       ],
       "storage": [
-        "S3 (assets, backups)"
+        "S3",
+        "Backups"
       ],
       "observability": [
-        "Basic logs + metrics"
+        "Basic logs",
+        "Basic metrics"
       ],
       "optional": [
         "CloudFront",
