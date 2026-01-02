@@ -1,6 +1,6 @@
 import type { LearningItem } from "@/interfaces/jsonTypes";
 import { useState } from "react";
-import ReferenceDialog from "../dialogs/ReferenceDialog";
+import ReferenceDialog from "../../dialogs/ReferenceDialog";
 import SubTaskBody from "./SubTaskBody";
 
 const TopicContent = ({ item }: { item: LearningItem }) => {

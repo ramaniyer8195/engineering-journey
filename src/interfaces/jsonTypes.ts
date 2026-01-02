@@ -1,3 +1,5 @@
+// Learning Tabs Types
+
 export interface LearningItem {
   id: string;
   title: string;
@@ -53,7 +55,81 @@ export interface Tracking {
   confidence: number,
   lastReviewed: Date | null,
   notes: string
-
 }
 
+// Projects Tab Types
+
+export interface ProjectItem {
+  projectId: string;
+  name: string;
+  type: string;
+  purpose: string;
+  details: string;
+  outcome: string;
+  topicsCovered: string[];
+  techStack: TechStack;
+  architecturePrinciples: string[];
+  features: Feature[];
+  userFlows: UserFlow[];
+  pages: Page[];
+  blogs: Blog[];
+  executionGuidelines: string[];
+  successCriteria: string[];
+  status: Status;
+}
+
+export interface Feature {
+  featureId: string;
+  name: string;
+  description: string;
+  topicsCovered: string[];
+  implementationNotes: string[];
+  pitfallsToAvoid: string[];
+}
+
+export interface UserFlow {
+  flowId: string;
+  name: string;
+  steps: string[];
+}
+
+export interface Page {
+  pageId: string;
+  name: string;
+  route: string;
+  features: string[];
+  topicsDemonstrated: string[];
+}
+
+export interface TechStack {
+  frontend?: string[];
+  backend?: string[];
+  state?: string[];
+  build?: string[];
+  styling?: string[];
+  database?: string[];
+  api?: string[];
+  auth?: string[];
+  realtime?: string[];
+  clientSdk?: string[];
+  resilience?: string[];
+  testing?: string[];
+  tooling?: string[];
+  ci_cd?: string[];
+  infra?: string[];
+  release?: string[];
+  observability?: string[];
+  storage?: string[];
+  payments?: string[];
+  backgroundJobs?: string[];
+  cache?: string[];
+  cloud?: string[];
+  optional?: string[];
+}
+
+export interface Status {
+  started: boolean;
+  completed: boolean;
+  lastUpdated: Date | null;
+}
 

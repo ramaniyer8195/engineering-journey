@@ -1,37 +1,31 @@
-import { useState } from "react";
-import { Badge } from "../ui/badge";
-import {
-  getStatusText,
-  getSubTaskDetailsText,
-  getSubTaskText,
-} from "@/utils/topicUtils";
-import { RiMoreFill } from "react-icons/ri";
+import { getFeatureText } from "@/utils/projectUtil";
 import { BsDot } from "react-icons/bs";
-import type { SubTask } from "@/interfaces/jsonTypes";
-import SubTaskDetailsDialog from "../dialogs/SubTaskDetailsDialog";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import type { Feature } from "@/interfaces/jsonTypes";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { RiMoreFill } from "react-icons/ri";
+import { useState } from "react";
+import FeatureDetailsDialog from "@/components/dialogs/FeatureDetailsDialog";
 
-const SubTaskBody = ({ subTask }: { subTask: SubTask }) => {
-  const { status, variant } = getStatusText(subTask.status);
+const FeatureBody = ({ feature }: { feature: Feature }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <div
-        key={subTask.id}
+        key={feature.featureId}
         className="my-1 bg-zinc-900 p-2 rounded flex items-center justify-between"
       >
         <div className="flex items-center gap-2 ">
           <BsDot className="text-primary" />
-          <span>{getSubTaskText(subTask.id)}</span>
+          <span>{getFeatureText(feature.featureId)}</span>
           <span>-</span>
-          <span>{subTask.title}</span>
+          <span>{feature.name}</span>
         </div>
         <div className="flex items-center gap-2">
-          <p className="font-body text-xs">{getSubTaskDetailsText(subTask)}</p>
-          <Badge variant={variant} className="font-display">
-            {status}
-          </Badge>
           <Tooltip>
             <TooltipTrigger>
               <span
@@ -47,13 +41,13 @@ const SubTaskBody = ({ subTask }: { subTask: SubTask }) => {
           </Tooltip>
         </div>
       </div>
-      <SubTaskDetailsDialog
+      <FeatureDetailsDialog
         open={open}
         onOpenChange={setOpen}
-        subTask={subTask}
+        feature={feature}
       />
     </>
   );
 };
 
-export default SubTaskBody;
+export default FeatureBody;

@@ -6,7 +6,7 @@ import {
 import type { LearningItem } from "@/interfaces/jsonTypes";
 import { getTopicText } from "@/utils/topicUtils";
 import TopicContent from "./TopicContent";
-import { Badge } from "../ui/badge";
+import { Badge } from "../../ui/badge";
 import { getStatusText } from "@/utils/topicUtils";
 
 const Topic = ({ item }: { item: LearningItem }) => {

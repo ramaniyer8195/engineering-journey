@@ -1,4 +1,5 @@
-import Learning from "@/components/journey/Learning";
+import Learning from "@/components/journey/learning/Learning";
+import Projects from "@/components/journey/projects/Projects";
 import { useState } from "react";
 import { Link } from "react-router";
 
@@ -12,7 +13,7 @@ const Journey = () => {
       case 0:
         return <Learning />;
       case 1:
-        return <h2>Projects</h2>;
+        return <Projects />;
       case 2:
         return <h2>Labs</h2>;
       case 3:
