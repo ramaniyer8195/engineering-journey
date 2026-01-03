@@ -1,22 +1,16 @@
-import type { ProjectItem } from "@/interfaces/jsonTypes";
 import { useState } from "react";
 import FeatureBody from "./FeatureBody";
-import ProjectDetailsDialog from "@/components/dialogs/ProjectDetailsDialog";
 import TechStackDialog from "@/components/dialogs/TechStackDialog";
-import UserFlowBody from "./UserFlowBody";
-import BlogDialog from "@/components/dialogs/BlogDialog";
+import type { LabItem } from "@/interfaces/jsonTypes";
+import LabDetailsDialog from "@/components/dialogs/LabDetailsDialog";
 
-const ProjectContent = ({ project }: { project: ProjectItem }) => {
+const LabContent = ({ lab }: { lab: LabItem }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [techStackOpen, setTechStackOpen] = useState(false);
-  const [blogOpen, setBlogOpen] = useState(false);
-  const publishedBlogCount = project.blogs.filter(
-    (blog) => blog.published === true
-  ).length;
 
   return (
     <div className="flex flex-col gap-4 px-6">
-      <div>{project.details}</div>
+      <div>{lab.details}</div>
       <div className="flex gap-4">
         <div
           className="font-display text-primary underline cursor-pointer w-fit"
@@ -30,48 +24,37 @@ const ProjectContent = ({ project }: { project: ProjectItem }) => {
         >
           View Tech Stack
         </div>
-        {publishedBlogCount > 0 && (
-          <div
+        {lab.blog.published && (
+          <a
             className="font-display text-primary underline cursor-pointer w-fit"
-            onClick={() => setBlogOpen(true)}
+            href={lab.blog.url}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View Blogs
-          </div>
+            Read Blog
+          </a>
         )}
       </div>
       <div className="flex flex-col gap-2">
         <div className="font-display text-base">Features</div>
         <div>
-          {project.features.map((feature) => (
+          {lab.features.map((feature) => (
             <FeatureBody feature={feature} />
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-2">
-        <div className="font-display text-base">User Flows</div>
-        <div>
-          {project.userFlows.map((userFlow) => (
-            <UserFlowBody userFlow={userFlow} />
-          ))}
-        </div>
-      </div>
-      <ProjectDetailsDialog
+      <LabDetailsDialog
         open={detailsOpen}
         onOpenChange={setDetailsOpen}
-        project={project}
+        lab={lab}
       />
       <TechStackDialog
         open={techStackOpen}
         onOpenChange={setTechStackOpen}
-        techStack={project.techStack}
-      />
-      <BlogDialog
-        open={blogOpen}
-        onOpenChange={setBlogOpen}
-        project={project}
+        techStack={lab.techStack}
       />
     </div>
   );
 };
 
-export default ProjectContent;
+export default LabContent;
