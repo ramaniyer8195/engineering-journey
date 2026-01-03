@@ -10,14 +10,14 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="my-3 mx-10 max-h-[89vh]">
+      <main className="min-h-[calc(100vh-64px)] overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/why" element={<Why />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
+      </main>
     </div>
   );
 }
