@@ -4,7 +4,7 @@ import Topic from "./Topic";
 
 const Learning = () => {
   return (
-    <div className="h-[86vh] overflow-y-auto overflow-x-hidden pr-3">
+    <div className="w-full">
       <Accordion type="single" collapsible className="w-full" defaultValue="">
         {learningData.map((item) => (
           <Topic item={item} key={item.id} />

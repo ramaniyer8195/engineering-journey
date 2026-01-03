@@ -4,7 +4,7 @@ import Lab from "./Lab";
 
 const Labs = () => {
   return (
-    <div className="h-[86vh] overflow-y-auto overflow-x-hidden pr-3">
+    <div className="w-full">
       <Accordion type="single" collapsible className="w-full" defaultValue="">
         {labsChecklist.map((lab) => (
           <Lab lab={lab} key={lab.miniProjectId} />

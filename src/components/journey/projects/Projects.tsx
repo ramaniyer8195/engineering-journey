@@ -4,7 +4,7 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <div className="h-[86vh] overflow-y-auto overflow-x-hidden pr-3">
+    <div className="w-full">
       <Accordion type="single" collapsible className="w-full" defaultValue="">
         {projectsChecklist.map((project) => (
           <Project project={project} key={project.projectId} />
