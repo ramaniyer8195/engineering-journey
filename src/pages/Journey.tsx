@@ -40,13 +40,13 @@ const Journey = () => {
 
   return (
     <div className="flex">
-      <div className="w-1/7">
+      <div className="w-1/7 flex flex-col justify-between">
         <div className="flex flex-col w-[90%]">
           {tabList.map((tab, index) => (
             <Link
               to={`/journey/#${tab}`}
               key={index}
-              className={`px-3 py-4 font-display text-xl hover:bg-primary ${
+              className={`px-3 py-4 font-display text-xl hover:bg-primary transition-colors ${
                 index === activeTab ? "bg-primary" : ""
               }`}
             >
@@ -54,8 +54,17 @@ const Journey = () => {
             </Link>
           ))}
         </div>
+
+        <div className="w-[90%] mb-4">
+          <Link
+            to="/"
+            className="flex items-center px-3 py-4 font-display text-xl hover:bg-primary border-t border-primary/30 transition-colors"
+          >
+            ← Back to Home
+          </Link>
+        </div>
       </div>
-      <div className="w-6/7 font-body p-4 border-l border-primary">
+      <div className="w-6/7 font-body p-4 border-l border-primary overflow-y-auto">
         {getMainContent(activeTab)}
       </div>
     </div>
