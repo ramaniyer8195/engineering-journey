@@ -1,6 +1,5 @@
-import { getFeatureText } from "@/utils/labUtils";
 import { BsDot } from "react-icons/bs";
-import type { Feature } from "@/interfaces/jsonTypes";
+import type { Problem } from "@/interfaces/jsonTypes";
 import {
   Tooltip,
   TooltipContent,
@@ -8,22 +7,29 @@ import {
 } from "@/components/ui/tooltip";
 import { RiMoreFill } from "react-icons/ri";
 import { useState } from "react";
-import FeatureDetailsDialog from "@/components/dialogs/FeatureDetailsDialog";
+import ProblemDetailsDialog from "@/components/dialogs/ProblemDetailsDialog";
 
-const FeatureBody = ({ feature }: { feature: Feature }) => {
+const ProblemBody = ({ problem }: { problem: Problem }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <div
-        key={feature.featureId}
+        key={problem.id}
         className="my-1 bg-zinc-900 p-2 rounded flex items-center justify-between"
       >
         <div className="flex items-center gap-2 ">
           <BsDot className="text-primary" />
-          <span>{getFeatureText(feature.featureId)}</span>
+          <span>Problem</span>
           <span>-</span>
-          <span>{feature.name}</span>
+          <a
+            href={problem.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {problem.title}
+          </a>
         </div>
         <div className="flex items-center gap-2">
           <Tooltip>
@@ -41,13 +47,13 @@ const FeatureBody = ({ feature }: { feature: Feature }) => {
           </Tooltip>
         </div>
       </div>
-      <FeatureDetailsDialog
+      <ProblemDetailsDialog
         open={open}
         onOpenChange={setOpen}
-        feature={feature}
+        problem={problem}
       />
     </>
   );
 };
 
-export default FeatureBody;
+export default ProblemBody;

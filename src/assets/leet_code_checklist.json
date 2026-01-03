@@ -1,187 +1,259 @@
-{
-  "leetcodePlan": {
-    "goal": "Build algorithmic intuition that transfers directly to system design, scalability, and production engineering",
-    "totalTargetProblems": 250,
-    "difficultyDistribution": {
-      "easy": 50,
-      "medium": 160,
-      "hard": 40
-    },
-    "rules": [
-      "Stop adding problems when pattern saturation is reached",
-      "Medium problems are the primary signal",
-      "Hard problems are for depth sampling, not volume",
-      "Every solved problem must map to a system design intuition",
-      "Re-solving and explaining problems counts as progress"
-    ]
+[
+  {
+    "categoryId": "LC-C1",
+    "name": "Arrays & Prefix Sums",
+    "details": "Focuses on basic data manipulation, range queries, and cumulative sum techniques for efficient subarray calculations.",
+    "targetCount": 20,
+    "patterns": [
+      "Prefix Sum",
+      "Difference Array",
+      "Kadane's Algorithm",
+      "2D Prefix Sum"
+    ],
+    "systemDesignSkills": [
+      "Cumulative Analytics/Metrics",
+      "Range Query Optimization",
+      "SLA Compliance Tracking",
+      "Read-heavy caching of derived data"
+    ],
+    "problems": []
   },
-  "categories": [
-    {
-      "categoryId": "LC-C1",
-      "name": "Arrays & Prefix Sums",
-      "targetCount": 20,
-      "patterns": ["Prefix Sum", "Difference Array"],
-      "systemDesignSkills": [
-        "Request aggregation",
-        "Metrics precomputation",
-        "Read-heavy optimization",
-        "Caching derived data"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C2",
-      "name": "Sliding Window",
-      "targetCount": 25,
-      "patterns": ["Sliding Window"],
-      "systemDesignSkills": [
-        "Rate limiting",
-        "Moving averages",
-        "Streaming data analysis",
-        "Burst control"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C3",
-      "name": "Two Pointers",
-      "targetCount": 15,
-      "patterns": ["Two Pointers"],
-      "systemDesignSkills": [
-        "In-place optimization",
-        "Memory efficiency",
-        "Latency-sensitive processing"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C4",
-      "name": "Hash Maps & Sets",
-      "targetCount": 20,
-      "patterns": ["Hash Map", "Hash Set"],
-      "systemDesignSkills": [
-        "Fast lookup",
-        "Indexing strategies",
-        "Deduplication",
-        "Cache key design"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C5",
-      "name": "Stacks & Queues",
-      "targetCount": 20,
-      "patterns": ["Stack", "Queue", "Monotonic Stack"],
-      "systemDesignSkills": [
-        "Backpressure handling",
-        "Request buffering",
-        "Execution ordering",
-        "Deferred processing"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C6",
-      "name": "Trees & Hierarchical Data",
-      "targetCount": 35,
-      "patterns": ["DFS", "BFS", "Tree Traversal"],
-      "systemDesignSkills": [
-        "Ownership models",
-        "Hierarchical permissions",
-        "Recursive systems",
-        "Org and folder structures"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C7",
-      "name": "Graphs & Distributed Systems",
-      "targetCount": 35,
-      "patterns": ["DFS", "BFS", "Topological Sort", "Dijkstra", "Union Find"],
-      "systemDesignSkills": [
-        "Service dependency graphs",
-        "Failure propagation",
-        "Network topology reasoning",
-        "Distributed coordination"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C8",
-      "name": "Dynamic Programming",
-      "targetCount": 40,
-      "patterns": ["1D DP", "2D DP", "Knapsack", "State Compression"],
-      "systemDesignSkills": [
-        "State modeling",
-        "Cost optimization",
-        "Capacity planning",
-        "Tradeoff analysis"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C9",
-      "name": "Greedy Algorithms",
-      "targetCount": 20,
-      "patterns": ["Greedy", "Invariant Maintenance"],
-      "systemDesignSkills": [
-        "Heuristic decision-making",
-        "Local vs global optima",
-        "Constraint satisfaction"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C10",
-      "name": "Binary Search & Search on Answer",
-      "targetCount": 20,
-      "patterns": ["Binary Search", "Search on Answer"],
-      "systemDesignSkills": [
-        "Threshold detection",
-        "Capacity estimation",
-        "Latency boundary analysis"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C11",
-      "name": "Backtracking & Recursion",
-      "targetCount": 15,
-      "patterns": ["Backtracking", "Recursion"],
-      "systemDesignSkills": [
-        "Combinatorial exploration",
-        "Configuration generation",
-        "Constraint solving"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C12",
-      "name": "Bit Manipulation & Low-Level Tricks",
-      "targetCount": 10,
-      "patterns": ["Bitmasking", "XOR"],
-      "systemDesignSkills": [
-        "Compact state representation",
-        "Permission flags",
-        "Performance micro-optimizations"
-      ],
-      "problems": []
-    },
-    {
-      "categoryId": "LC-C13",
-      "name": "Hard Problems (Depth Sampling)",
-      "targetCount": 40,
-      "patterns": [
-        "Advanced DP",
-        "Advanced Graph Algorithms",
-        "Complex Invariants"
-      ],
-      "systemDesignSkills": [
-        "Complex tradeoff reasoning",
-        "Edge-case mastery",
-        "Invariant preservation under stress"
-      ],
-      "problems": []
-    }
-  ]
-}
+  {
+    "categoryId": "LC-C2",
+    "name": "Sliding Window",
+    "details": "Techniques for processing sub-segments of data, useful for finding optimal subarrays or substrings with specific properties.",
+    "targetCount": 25,
+    "patterns": [
+      "Fixed Window",
+      "Variable Window",
+      "Sliding Window Maximum"
+    ],
+    "systemDesignSkills": [
+      "P99 Latency Calculation over windows",
+      "Rate Limiting (Sliding Log/Log-less)",
+      "Real-time Streaming Aggregations",
+      "Traffic Burst control & Smoothing"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C3",
+    "name": "Two Pointers",
+    "details": "Efficiency-focused patterns using multiple indices to traverse arrays or lists, often reducing time complexity from O(n²) to O(n).",
+    "targetCount": 15,
+    "patterns": [
+      "Fast & Slow Pointers",
+      "Opposite Direction",
+      "Collision Detection"
+    ],
+    "systemDesignSkills": [
+      "In-place Memory Optimization",
+      "Cycle Detection in Distributed Workflows",
+      "Latency-sensitive buffer processing",
+      "Stream deduplication"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C4",
+    "name": "Hash Maps & Sets",
+    "details": "Leveraging O(1) lookups for frequency counting, constant-time existence checks, and mapping relationships between data points.",
+    "targetCount": 20,
+    "patterns": [
+      "Frequency Map",
+      "LRU/LFU Cache Pattern",
+      "Rolling Hash"
+    ],
+    "systemDesignSkills": [
+      "Fast Metadata Lookup",
+      "Consistency Hashing Foundations",
+      "Sharding Key Selection Strategies",
+      "Distributed Cache Key Design"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C5",
+    "name": "Stacks & Queues",
+    "details": "Linear data structures for managing order (LIFO/FIFO), crucial for expression parsing, BFS, and monotonic constraints.",
+    "targetCount": 20,
+    "patterns": [
+      "Monotonic Stack/Queue",
+      "Circular Queue",
+      "Min/Max Stack"
+    ],
+    "systemDesignSkills": [
+      "Backpressure & Flow Control",
+      "Asynchronous Task Buffering",
+      "Undo/Redo & State Management",
+      "Priority-based execution ordering"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C6",
+    "name": "Trees & Hierarchical Data",
+    "details": "Algorithms for searching and manipulating hierarchical structures like Binary Trees, Tries, and Segment Trees.",
+    "targetCount": 35,
+    "patterns": [
+      "LCA",
+      "Tree Diameter",
+      "Trie (Prefix Tree)",
+      "Segment/Fenwick Tree"
+    ],
+    "systemDesignSkills": [
+      "Index Storage Systems (B-Trees/LSM)",
+      "Hierarchical Permissions (RBAC/ABAC)",
+      "Autocomplete & Typeahead Engine Foundations",
+      "Nested Document Search"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C7",
+    "name": "Graphs & Distributed Systems",
+    "details": "Modeling relationships and networks, covering pathfinding (Dijkstra), connectivity (Union-Find), and dependency management.",
+    "targetCount": 35,
+    "patterns": [
+      "Topological Sort",
+      "Dijkstra/A*",
+      "Tarjan's (SCC)",
+      "Union Find"
+    ],
+    "systemDesignSkills": [
+      "Service Mesh Dependency Mapping",
+      "Fault Propagation & Blast Radius Analysis",
+      "Distributed Transaction Coordination",
+      "Conflict Resolution (OT/CRDT foundations)"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C8",
+    "name": "Dynamic Programming",
+    "details": "Solving complex problems by breaking them into overlapping subproblems and storing results to avoid redundant computations.",
+    "targetCount": 40,
+    "patterns": [
+      "State Compression",
+      "Interval DP",
+      "Bitmask DP",
+      "Knapsack"
+    ],
+    "systemDesignSkills": [
+      "Cost-Optimization Decision Engines",
+      "Resource Allocation under Constraints",
+      "Multi-year Capacity Planning Models",
+      "Advanced Tradeoff Quantification"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C9",
+    "name": "Greedy Algorithms",
+    "details": "Making locally optimal choices at each step with the hope of finding a global optimum, often used for optimization and scheduling.",
+    "targetCount": 20,
+    "patterns": [
+      "Interval Scheduling",
+      "Huffman Coding",
+      "Prim's/Kruskal's"
+    ],
+    "systemDesignSkills": [
+      "Heuristic-based Bottleneck Resolution",
+      "Local vs Global Optimization Analysis",
+      "Approximate solutions for NP-Hard problems",
+      "Request prioritization"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C10",
+    "name": "Binary Search",
+    "details": "Efficiently searching in sorted spaces by repeatedly halving the search range, applicable beyond simple array lookups (search on answer).",
+    "targetCount": 20,
+    "patterns": [
+      "Search on Answer",
+      "Median Discovery",
+      "Rotated Array Search"
+    ],
+    "systemDesignSkills": [
+      "Log File Retrieval (Time-based seeking)",
+      "Auto-scaling Threshold Detection",
+      "Boundary Analysis for Latency Pools",
+      "Efficient Range Scanning"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C11",
+    "name": "Backtracking & Search",
+    "details": "Exploring all possible configurations to find solutions to constraint satisfaction problems like permutations and combinations.",
+    "targetCount": 15,
+    "patterns": [
+      "Pruning",
+      "Constraint Satisfaction",
+      "Combinatorial Generation"
+    ],
+    "systemDesignSkills": [
+      "Configuration Policy Enforcement",
+      "Intelligent Exploration of Solution Spaces",
+      "Rule Engine Implementation",
+      "Resource Scheduling Algorithms"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C12",
+    "name": "Bit Manipulation & Storage",
+    "details": "Low-level bitwise operations for memory efficiency, flags, and mathematical optimizations.",
+    "targetCount": 10,
+    "patterns": [
+      "Bitmasking",
+      "XOR Manipulation",
+      "Bitset Ops"
+    ],
+    "systemDesignSkills": [
+      "Compact Protocol Encodings",
+      "Memory-mapped Boolean Flags",
+      "Efficient Bit-packed Storage",
+      "Checksum & Error Correction foundations"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C13",
+    "name": "Concurrency & Systems Foundations",
+    "details": "Dealing with parallel execution, synchronization primitives, and resource management in multi-threaded environments.",
+    "targetCount": 15,
+    "patterns": [
+      "Producer-Consumer",
+      "Deadlock Detection",
+      "Read-Write Locking",
+      "Atomic Operations"
+    ],
+    "systemDesignSkills": [
+      "Multi-threaded Safety & Race Condition Prevention",
+      "Thread Pool Lifecycle Management",
+      "Optimistic vs Pessimistic Locking Tradeoffs",
+      "Event-Driven Consistency Models"
+    ],
+    "problems": []
+  },
+  {
+    "categoryId": "LC-C14",
+    "name": "Hard Problems (Depth & Edge Cases)",
+    "details": "Advanced challenges combining multiple patterns, requiring deep analysis of invariants and extreme edge case handling.",
+    "targetCount": 35,
+    "patterns": [
+      "Advanced DP (Transitions)",
+      "Complex Invariants",
+      "String Matching (KMP/RK)"
+    ],
+    "systemDesignSkills": [
+      "Edge-case Mastery in Production",
+      "System Invariant Preservation Under Stress",
+      "High-performance Pattern Recognition",
+      "Critical Path Analysis"
+    ],
+    "problems": []
+  }
+]
