@@ -149,3 +149,24 @@ export interface LabItem {
   successCriteria: string[];
   status: Status;
 }
+
+// LeetCode Tab Types
+export interface CategoryItem {
+  categoryId: string;
+  details: string;
+  name: string;
+  targetCount: number;
+  patterns: string[];
+  systemDesignSkills: string[];
+  problems: Problem[];
+}
+
+export interface Problem {
+  id: string;
+  title: string;
+  difficulty: string;
+  whyItMatters: string;
+  whenToUse: string;
+  link: string;
+}
+
