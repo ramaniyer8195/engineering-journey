@@ -5,16 +5,16 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import type { ProjectItem } from "@/interfaces/jsonTypes";
+import type { TechStack } from "@/interfaces/jsonTypes";
 
 const TechStackDialog = ({
   open,
   onOpenChange,
-  project,
+  techStack,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  project: ProjectItem;
+  techStack: TechStack;
 }) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -25,9 +25,8 @@ const TechStackDialog = ({
           </DialogTitle>
           <DialogDescription className="text-base font-body mt-2">
             <div className="flex flex-col gap-2">
-              {Object.keys(project.techStack).map((key) => {
-                const techArray =
-                  project.techStack[key as keyof typeof project.techStack];
+              {Object.keys(techStack).map((key) => {
+                const techArray = techStack[key as keyof typeof techStack];
 
                 if (!techArray) {
                   return null;

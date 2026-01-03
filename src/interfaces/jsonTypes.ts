@@ -133,3 +133,19 @@ export interface Status {
   lastUpdated: Date | null;
 }
 
+// Lab Tab Types
+export interface LabItem {
+  miniProjectId: string;
+  name: string;
+  type: string;
+  purpose: string;
+  details: string;
+  outcome: string;
+  topicsCovered: string[];
+  techStack: TechStack;
+  features: Feature[];
+  blog: Blog;
+  executionGuidelines: string[];
+  successCriteria: string[];
+  status: Status;
+}

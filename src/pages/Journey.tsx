@@ -1,3 +1,4 @@
+import Labs from "@/components/journey/labs/Labs";
 import Learning from "@/components/journey/learning/Learning";
 import Projects from "@/components/journey/projects/Projects";
 import { useState } from "react";
@@ -15,7 +16,7 @@ const Journey = () => {
       case 1:
         return <Projects />;
       case 2:
-        return <h2>Labs</h2>;
+        return <Labs />;
       case 3:
         return <h2>LeetCode</h2>;
     }
